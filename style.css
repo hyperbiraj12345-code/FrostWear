@@ -5,6 +5,22 @@
 }
 
 .top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.bottom-nav {
+  position: fixed;
+  top: 80px;   /* directly below top-nav (80px tall) */
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.top-nav {
   height: 80px;
   display: flex;
   align-items: center;
