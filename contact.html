@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | FrostWear</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+
+    <nav class="top-nav">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="./asset/logo.png" alt="FrostWear Logo">
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-box">
+            <input type="text" placeholder="Search for products...">
+            <button>
+                <img src="./asset/search.svg" alt="Search">
+            </button>
+        </div>
+
+        <!-- Right side -->
+        <div class="actions">
+            <a href="#" class="action-item">
+                <img src="./asset/circle-user.svg" alt="User">
+                <span>Account</span>
+            </a>
+            <a href="#" class="action-item">
+                <img src="./asset/heart.svg" alt="Wishlist">
+                <span>Wishlist</span>
+            </a>
+            <a href="#" class="action-item">
+                <img src="./asset/shopping-cart.svg" alt="Cart">
+                <span>Cart</span>
+            </a>
+        </div>
+    </nav>
+
+    <nav class="bottom-nav">
+        <ul>
+            <li>
+                <a href="#" class="categories">
+                    <img src="./asset/menu.svg" alt="Menu">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Winter Wear</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Sale</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Us Section -->
+<section class="contact-section">
+
+    <div class="contact-container">
+
+        <!-- Left Side: Contact Information -->
+        <div class="contact-info">
+            <h1>Contact Us</h1>
+            <p class="contact-intro">
+                Have a question about our products, orders, or delivery?
+                We are here to help. Get in touch with FrostWear.
+            </p>
+
+            <div class="contact-item">
+                <img src="./asset/phone.svg" alt="Phone">
+                <div>
+                    <h3>Call Us</h3>
+                    <p>+977 9800000000</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <img src="./asset/email.svg" alt="Email">
+                <div>
+                    <h3>Email Us</h3>
+                    <p>support@frostwear.com</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <img src="./asset/location.svg" alt="Location">
+                <div>
+                    <h3>Visit Us</h3>
+                    <p>Kathmandu, Nepal</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <img src="./asset/clock.svg" alt="Opening Hours">
+                <div>
+                    <h3>Opening Hours</h3>
+                    <p>Sunday - Friday: 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Right Side: Contact Form -->
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+
+            <form id="contactForm">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                   <div class="form-group">
+                    <label for="phone">Phone Number</label>
+
+                         <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="98XXXXXXXX"
+                            inputmode="numeric"
+                            maxlength="10"
+                            minlength="10"
+                            pattern="^(96|97|98)[0-9]{8}$"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="Enter subject"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Write your message here..."
+                        minlength="10"
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="send-btn">
+                     Send Message
+            </button>
+
+            <p id="successMessage" class="success-message">
+                    Your message has been sent successfully!
+            </p>
+
+            </form>
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    <!--  Main Footer Conatiner -->
+    <div class="main-footer">
+
+        <div class="row1">
+
+            <div class="footer-image-holder">
+                <a href=""><img src="./asset/FrostWearLogo.png" style="height:150px; width:320px"></a>
+                <p style="font-weight:bold;">Stay Warm. Stay Stylish.</p>
+                <p style="color:white;max-width: 260px;">Premuim winter clothing designed for comfort ,durability, and everyday adventures.</p>
+                <div class="social-media-holder">
+                     <a href="https://www.instagram.com/?hl=en" target="_blank"><img src="./asset/Instagram.png"></a>
+                     <a href="https://www.facebook.com/" target="_blank"><img src="./asset/Facebook.png"></a>
+                     <a href="https://www.tiktok.com/" target="_blank"><img src="./asset/Tiktok.png"></a>
+                     <a href="https://x.com/" target="_blank"><img src="./asset/X.png"></a>
+                     <a href="https://www.youtube.com/" target="_blank"><img src="./asset/Youtube.png"></a>
+                </div>
+            </div>
+
+            <ul class="footer-data">
+                <h3 class="footer-data-heading">SHOP</h3>
+                <li><a>Men</a></li>
+                <li><a>Women</a></li>
+                <li><a>Jackets</a></li>
+                <li><a>Hoodies</a></li>
+                <li><a>Sweaters</a></li>
+            </ul>
+
+            <ul class="footer-data">
+                <h3 class="footer-data-heading">CUSTOMER CARE</h3>
+                <li><a>Contact Us</a></li>
+                <li><a>FAQ</a></li>
+                <li><a>Order Tracking</a></li>
+                <li><a>Shipping Information</a></li>
+                <li><a>Terms and Conditions</a></li>
+            </ul>
+
+            <ul class="footer-data">
+                <h3 class="footer-data-heading">COMPANY </h3>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a>Our Story</a></li>
+                <li><a>Blog</a></li>
+                <li><a>Sustainability</a></li>
+                <li><a>Terms and Conditions</a></li>
+            </ul>
+
+            <ul class="footer-data">
+                <h3 class="footer-data-heading">STAY WARM WITH US </h3>
+                <li style="max-width:240px ;"><a>Get winter style inspiration and exclusive
+                    offers delivered to your inbox</a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+            </ul>
+
+        </div>
+
+        <div class="row2">
+            <div class="footer-feature">
+                <img class="footer-feature-image" src="./asset/Security.png" >
+                <div class="footer-feature-text">
+                    <h3>SECURE<h3>
+                    <p>100% safe & secure</p>
+                 </div>
+            </div>
+
+            <div class="footer-feature">
+                <img class="footer-feature-image" src="./asset/Van.png" >
+                <div class="footer-feature-text">
+                    <h3>FAST DELIVERY<h3>
+                    <p>Quick & reliable shipping</p>
+                 </div>
+            </div>
+
+            <div class="footer-feature">
+                <img class="footer-feature-image" src="./asset/EasyReturn.png" >
+                <div class="footer-feature-text">
+                    <h3>EASY RETURNS<h3>
+                    <p>Hassle free returns</p>
+                 </div>
+            </div>
+
+            <div class="footer-feature">
+                <img class="footer-feature-image" src="./asset/Medal.png" >
+                <div class="footer-feature-text">
+                    <h3>PREMIUM QUALITY<h3>
+                    <p>Build to last, made for you</p>
+                 </div>
+            </div>
+
+            <div class="footer-feature">
+                <img class="footer-feature-image" src="./asset/Headphone.png" >
+                <div class="footer-feature-text">
+                    <h3>CUSTOMER SUPPORT<h3>
+                    <p>We are here to help you</p>
+                 </div>
+            </div>
+
+        </div>
+
+        <div class="row3">
+            <div style="margin-left: 35px;">
+                <p style="color: whitesmoke;font-size:18px;font-weight: 600;font-family: Arial,
+                Helvetica, sans-serif;">WE ACCEPT</p>
+                <div class="footer-image-economy">
+                    <img src="./asset/Visa.png">
+                    <img src="./asset/VennDiagram.png">
+                    <img src="./asset/ESewa.png">
+                    <img src="./asset/Khalti.png">
+                    <img src="./asset/FonePay.png">
+                    <img src="./asset/PayPal.png">
+                </div>
+            </div>
+
+
+            <div>
+                <p style="color: whitesmoke;font-size:18px;font-weight: 600;font-family: Arial,
+                Helvetica, sans-serif;">DELIVERY PARTNERS</p>
+                <div class="footer-image-economy">
+                    <img src="./asset/NepalCanMove.png">
+                    <img src="./asset/Pathao.png">
+                    <img src="./asset/LocalCourier.png">
+                    <img src="./asset/DHL.png">
+                </div>
+            </div>
+
+        </div>
+
+        <div style=" width: 100%;height: 3px; background-color: green;"></div>
+
+        <div class="row4">
+            <div style="display: flex;">
+                <img src="./asset/Frost.png" style="height: 70px;width: 70px;">
+                <p> &copy; 2026 <span style="color: green;font-weight: 600;">FrostWear</span> . All Rights Reserved </p>
+            </div>
+
+            <div style="display: flex;gap: 30px;margin-right: 50px;">
+                <p>Privacy Policy </p>
+                <p>|</p>
+                <p>Terms & Conditions </p>
+                <p>|</p>
+                <p>Return Policy </p>
+                <p>|</p>
+                <p>Site Map</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<script src="./contact.js"></script>
+</body>
+</html>
