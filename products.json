@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "name": "Classic Wool Overcoat",
+        "price": 89.99,
+        "oldPrice": null,
+        "category": "men",
+        "badge": "New",
+        "image": "./asset/products/product-01.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Fleece Lined Parka",
+        "price": 69.99,
+        "oldPrice": null,
+        "category": "women",
+        "badge": "New",
+        "image": "./asset/products/product-02.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Thermal Puffer Jacket",
+        "price": 79.99,
+        "oldPrice": 119.99,
+        "category": "jackets",
+        "badge": "-33%",
+        "image": "./asset/products/product-03.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Urban Zip Hoodie",
+        "price": 49.99,
+        "oldPrice": null,
+        "category": "hoodies",
+        "badge": null,
+        "image": "./asset/products/product-04.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Knit Crewneck Sweater",
+        "price": 39.99,
+        "oldPrice": 59.99,
+        "category": "men",
+        "badge": "-33%",
+        "image": "./asset/products/product-05.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Quilted Vest Jacket",
+        "price": 94.99,
+        "oldPrice": null,
+        "category": "women",
+        "badge": "New",
+        "image": "./asset/products/product-06.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Oversized Winter Hoodie",
+        "price": 29.99,
+        "oldPrice": 44.99,
+        "category": "hoodies",
+        "badge": "-33%",
+        "image": "./asset/products/product-07.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Premium Leather Jacket",
+        "price": 139.99,
+        "oldPrice": null,
+        "category": "jackets",
+        "badge": "New",
+        "image": "./asset/products/product-08.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Arctic Down Jacket",
+        "price": 109.99,
+        "oldPrice": null,
+        "category": "men",
+        "badge": "New",
+        "image": "./asset/products/product-09.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Cashmere Blend Cardigan",
+        "price": 74.99,
+        "oldPrice": null,
+        "category": "women",
+        "badge": "New",
+        "image": "./asset/products/product-10.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Waterproof Shell Jacket",
+        "price": 129.99,
+        "oldPrice": null,
+        "category": "jackets",
+        "badge": "New",
+        "image": "./asset/products/product-11.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Thermal Fleece Hoodie",
+        "price": 54.99,
+        "oldPrice": null,
+        "category": "hoodies",
+        "badge": "New",
+        "image": "./asset/products/product-12.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Slim Fit Cargo Pants",
+        "price": 59.99,
+        "oldPrice": 79.99,
+        "category": "men",
+        "badge": "-25%",
+        "image": "./asset/products/product-13.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Winter Knit Sweater",
+        "price": 64.99,
+        "oldPrice": null,
+        "category": "women",
+        "badge": "New",
+        "image": "./asset/products/product-14.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Bomber Puffer Jacket",
+        "price": 99.99,
+        "oldPrice": 149.99,
+        "category": "jackets",
+        "badge": "-33%",
+        "image": "./asset/products/product-15.jpg"
+    },
+    {
+        "id": 16,
+        "name": "Pullover Fleece Hoodie",
+        "price": 44.99,
+        "oldPrice": null,
+        "category": "hoodies",
+        "badge": "New",
+        "image": "./asset/products/product-16.jpg"
+    }
+]
