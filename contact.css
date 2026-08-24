@@ -33,7 +33,7 @@
 .contact-info h1::after {
     content: "";
     display: block;
-    width: 70px;
+    width: 120px;
     height: 3px;
     background: #38bdf8;
     margin-top: 14px;
