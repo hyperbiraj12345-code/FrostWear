@@ -190,16 +190,17 @@
 .main-footer{
     display:flex;
     flex-direction: column;
-    background-color:#000C19;
+    background-color:#060A17;
 }
 .row1{
     display: flex;
     gap: 70px;
+    margin-left:30px;
 }
 .footer-image-holder{
     display: flex;
     flex-direction: column;
-    background-color:#000C19 ;
+    background-color:#060A17 ;
     max-width:350px;
 }
 .footer-image-holder p{
@@ -209,6 +210,10 @@
     color: green;
     align-self: center;
     letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+.footer-image-holder a{
+    margin-bottom: 10px;
 }
 .social-media-holder{
     display:flex;
@@ -231,6 +236,7 @@
     font-family: Arial, Helvetica, sans-serif;
     color: whitesmoke;
     letter-spacing: 0.5px;
+    text-decoration: none;
 }
 .footer-data a:hover{
     color: green;
@@ -249,7 +255,7 @@
   text-underline-offset: 10px;
 }
 .footer-data li::marker{
-    color:#000C19 ;
+    color:#060A17 ;
 }
 .row2{
     display: flex;
