@@ -148,21 +148,6 @@
     color:#ffff;
 }
 
-.bottom-nav ul li a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-8px;
-    width:0;
-    height:2px;
-    background:#ffff;
-    transition:.3s;
-}
-
-.bottom-nav ul li a:hover::after{
-    width:100%;
-}
-
 .bottom-nav{
     box-shadow:0 2px 6px rgba(0,0,0,.08);
 }
