@@ -34,11 +34,6 @@
     color: #fff;
 }
 
-/* ===== ACTIVE NAV LINK ===== */
-.bottom-nav ul li a.active {
-    color: #fff;
-}
-
 /* ===== ABOUT HERO ===== */
 .about-hero {
     position: relative;
