@@ -1,0 +1,227 @@
+﻿[
+    {
+        "id":  1,
+        "name":  "Classic Wool Overcoat",
+        "price":  59.99,
+        "oldPrice":  89.99,
+        "category":  "men",
+        "badge":  "-33%",
+        "image":  "../../asset/products/product-01.jpg"
+    },
+    {
+        "id":  2,
+        "name":  "Fleece Lined Parka",
+        "price":  46.99,
+        "oldPrice":  69.99,
+        "category":  "women",
+        "badge":  "-33%",
+        "image":  "../../asset/products/product-02.jpg"
+    },
+    {
+        "id":  3,
+        "name":  "Thermal Puffer Jacket",
+        "price":  79.99,
+        "oldPrice":  119.99,
+        "category":  "jackets",
+        "badge":  "-33%",
+        "image":  "../../asset/products/product-03.jpg"
+    },
+    {
+        "id":  5,
+        "name":  "Knit Crewneck Sweater",
+        "price":  39.99,
+        "oldPrice":  59.99,
+        "category":  "men",
+        "badge":  "-33%",
+        "image":  "../../asset/products/product-05.jpg"
+    },
+    {
+        "id":  7,
+        "name":  "Oversized Fit Tee",
+        "price":  29.99,
+        "oldPrice":  44.99,
+        "category":  "tshirts",
+        "badge":  "-33%",
+        "image":  "../../asset/products/product-07.jpg"
+    },
+    {
+        "id":  13,
+        "name":  "Slim Fit Cargo Pants",
+        "price":  59.99,
+        "oldPrice":  79.99,
+        "category":  "men",
+        "badge":  "-25%",
+        "image":  "../../asset/products/product-13.jpg"
+    },
+    {
+        "id":  15,
+        "name":  "Bomber Puffer Jacket",
+        "price":  99.99,
+        "oldPrice":  149.99,
+        "category":  "jackets",
+        "badge":  "-33%",
+        "image":  "../../asset/products/product-15.jpg"
+    },
+    {
+        "id":  17,
+        "name":  "Quilted Parka Coat",
+        "price":  89.99,
+        "oldPrice":  129.99,
+        "category":  "jackets",
+        "badge":  "-31%",
+        "image":  "../../asset/products/product-17.jpg"
+    },
+    {
+        "id":  19,
+        "name":  "Classic Leather Jacket",
+        "price":  109.99,
+        "oldPrice":  159.99,
+        "category":  "jackets",
+        "badge":  "-31%",
+        "image":  "../../asset/products/product-19.jpg"
+    },
+    {
+        "id":  21,
+        "name":  "Zip Pocket Tee",
+        "price":  34.99,
+        "oldPrice":  54.99,
+        "category":  "tshirts",
+        "badge":  "-36%",
+        "image":  "../../asset/products/product-21.jpg"
+    },
+    {
+        "id":  26,
+        "name":  "Wool Blend Peacoat",
+        "price":  69.99,
+        "oldPrice":  99.99,
+        "category":  "jackets",
+        "badge":  "-30%",
+        "image":  "../../asset/products/product-26.jpg"
+    },
+    {
+        "id":  27,
+        "name":  "Cashmere Turtleneck",
+        "price":  54.99,
+        "oldPrice":  84.99,
+        "category":  "women",
+        "badge":  "-35%",
+        "image":  "../../asset/products/product-27.jpg"
+    },
+    {
+        "id":  28,
+        "name":  "Insulated Ski Jacket",
+        "price":  119.99,
+        "oldPrice":  179.99,
+        "category":  "jackets",
+        "badge":  "-33%",
+        "image":  "../../asset/products/product-28.jpg"
+    },
+    {
+        "id":  30,
+        "name":  "Flannel Lined Jeans",
+        "price":  44.99,
+        "oldPrice":  64.99,
+        "category":  "men",
+        "badge":  "-31%",
+        "image":  "../../asset/products/product-30.jpg"
+    },
+    {
+        "id":  32,
+        "name":  "Boxy Crop Tee",
+        "price":  39.99,
+        "oldPrice":  59.99,
+        "category":  "tshirts",
+        "badge":  "-33%",
+        "image":  "../../asset/products/product-32.jpg"
+    },
+    {
+        "id":  34,
+        "name":  "Down Fill Vest",
+        "price":  59.99,
+        "oldPrice":  89.99,
+        "category":  "jackets",
+        "badge":  "-33%",
+        "image":  "../../asset/products/product-34.jpg"
+    },
+    {
+        "id":  36,
+        "name":  "Merino Wool Cardigan",
+        "price":  64.99,
+        "oldPrice":  94.99,
+        "category":  "women",
+        "badge":  "-32%",
+        "image":  "../../asset/products/product-36.jpg"
+    },
+    {
+        "id":  38,
+        "name":  "Heavyweight Parka",
+        "price":  129.99,
+        "oldPrice":  189.99,
+        "category":  "jackets",
+        "badge":  "-32%",
+        "image":  "../../asset/products/product-38.jpg"
+    },
+    {
+        "id":  40,
+        "name":  "Thermal Jogger Pants",
+        "price":  34.99,
+        "oldPrice":  54.99,
+        "category":  "men",
+        "badge":  "-36%",
+        "image":  "../../asset/products/product-40.jpg"
+    },
+    {
+        "id":  42,
+        "name":  "Fleece Lined Leggings",
+        "price":  29.99,
+        "oldPrice":  44.99,
+        "category":  "women",
+        "badge":  "-33%",
+        "image":  "../../asset/products/product-42.jpg"
+    },
+    {
+        "id":  44,
+        "name":  "Tech Windbreaker",
+        "price":  74.99,
+        "oldPrice":  109.99,
+        "category":  "jackets",
+        "badge":  "-32%",
+        "image":  "../../asset/products/product-44.jpg"
+    },
+    {
+        "id":  46,
+        "name":  "Cable Knit Sweater",
+        "price":  49.99,
+        "oldPrice":  74.99,
+        "category":  "women",
+        "badge":  "-33%",
+        "image":  "../../asset/products/product-46.jpg"
+    },
+    {
+        "id":  48,
+        "name":  "Hiking Boots Waterproof",
+        "price":  89.99,
+        "oldPrice":  129.99,
+        "category":  "men",
+        "badge":  "-31%",
+        "image":  "../../asset/products/product-48.jpg"
+    },
+    {
+        "id":  50,
+        "name":  "Quilted Crossbody Bag",
+        "price":  39.99,
+        "oldPrice":  59.99,
+        "category":  "women",
+        "badge":  "-33%",
+        "image":  "../../asset/products/product-50.jpg"
+    },
+    {
+        "id":  52,
+        "name":  "Vintage Wash Tee",
+        "price":  19.99,
+        "oldPrice":  29.99,
+        "category":  "tshirts",
+        "badge":  "-33%",
+        "image":  "../../asset/products/product-52.jpg"
+    }
+]
