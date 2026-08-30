@@ -1,146 +1,902 @@
-[
+﻿[
     {
-        "id": 1,
-        "name": "Classic Wool Overcoat",
-        "price": 89.99,
-        "oldPrice": null,
-        "category": "men",
-        "badge": "New",
-        "image": "./asset/products/product-01.jpg"
+        "id":  1,
+        "name":  "Classic Wool Overcoat",
+        "price":  89.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-01.jpg"
     },
     {
-        "id": 2,
-        "name": "Fleece Lined Parka",
-        "price": 69.99,
-        "oldPrice": null,
-        "category": "women",
-        "badge": "New",
-        "image": "./asset/products/product-02.jpg"
+        "id":  2,
+        "name":  "Fleece Lined Parka",
+        "price":  69.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-02.jpg"
     },
     {
-        "id": 3,
-        "name": "Thermal Puffer Jacket",
-        "price": 79.99,
-        "oldPrice": 119.99,
-        "category": "jackets",
-        "badge": "-33%",
-        "image": "./asset/products/product-03.jpg"
+        "id":  3,
+        "name":  "Thermal Puffer Jacket",
+        "price":  79.99,
+        "oldPrice":  119.99,
+        "category":  "jackets",
+        "badge":  "-33%",
+        "image":  "./asset/products/product-03.jpg"
     },
     {
-        "id": 4,
-        "name": "Urban Zip Hoodie",
-        "price": 49.99,
-        "oldPrice": null,
-        "category": "hoodies",
-        "badge": null,
-        "image": "./asset/products/product-04.jpg"
+        "id":  4,
+        "name":  "Classic Crew Tee",
+        "price":  49.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  null,
+        "image":  "./asset/products/product-04.jpg"
     },
     {
-        "id": 5,
-        "name": "Knit Crewneck Sweater",
-        "price": 39.99,
-        "oldPrice": 59.99,
-        "category": "men",
-        "badge": "-33%",
-        "image": "./asset/products/product-05.jpg"
+        "id":  5,
+        "name":  "Knit Crewneck Sweater",
+        "price":  39.99,
+        "oldPrice":  59.99,
+        "category":  "men",
+        "badge":  "-33%",
+        "image":  "./asset/products/product-05.jpg"
     },
     {
-        "id": 6,
-        "name": "Quilted Vest Jacket",
-        "price": 94.99,
-        "oldPrice": null,
-        "category": "women",
-        "badge": "New",
-        "image": "./asset/products/product-06.jpg"
+        "id":  6,
+        "name":  "Quilted Vest Jacket",
+        "price":  94.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-06.jpg"
     },
     {
-        "id": 7,
-        "name": "Oversized Winter Hoodie",
-        "price": 29.99,
-        "oldPrice": 44.99,
-        "category": "hoodies",
-        "badge": "-33%",
-        "image": "./asset/products/product-07.jpg"
+        "id":  7,
+        "name":  "Oversized Fit Tee",
+        "price":  29.99,
+        "oldPrice":  44.99,
+        "category":  "tshirts",
+        "badge":  "-33%",
+        "image":  "./asset/products/product-07.jpg"
     },
     {
-        "id": 8,
-        "name": "Premium Leather Jacket",
-        "price": 139.99,
-        "oldPrice": null,
-        "category": "jackets",
-        "badge": "New",
-        "image": "./asset/products/product-08.jpg"
+        "id":  8,
+        "name":  "Premium Leather Jacket",
+        "price":  139.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-08.jpg"
     },
     {
-        "id": 9,
-        "name": "Arctic Down Jacket",
-        "price": 109.99,
-        "oldPrice": null,
-        "category": "men",
-        "badge": "New",
-        "image": "./asset/products/product-09.jpg"
+        "id":  9,
+        "name":  "Arctic Down Jacket",
+        "price":  109.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-09.jpg"
     },
     {
-        "id": 10,
-        "name": "Cashmere Blend Cardigan",
-        "price": 74.99,
-        "oldPrice": null,
-        "category": "women",
-        "badge": "New",
-        "image": "./asset/products/product-10.jpg"
+        "id":  10,
+        "name":  "Cashmere Blend Cardigan",
+        "price":  74.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-10.jpg"
     },
     {
-        "id": 11,
-        "name": "Waterproof Shell Jacket",
-        "price": 129.99,
-        "oldPrice": null,
-        "category": "jackets",
-        "badge": "New",
-        "image": "./asset/products/product-11.jpg"
+        "id":  11,
+        "name":  "Waterproof Shell Jacket",
+        "price":  129.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-11.jpg"
     },
     {
-        "id": 12,
-        "name": "Thermal Fleece Hoodie",
-        "price": 54.99,
-        "oldPrice": null,
-        "category": "hoodies",
-        "badge": "New",
-        "image": "./asset/products/product-12.jpg"
+        "id":  12,
+        "name":  "Thermal Long Sleeve Tee",
+        "price":  54.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "./asset/products/product-12.jpg"
     },
     {
-        "id": 13,
-        "name": "Slim Fit Cargo Pants",
-        "price": 59.99,
-        "oldPrice": 79.99,
-        "category": "men",
-        "badge": "-25%",
-        "image": "./asset/products/product-13.jpg"
+        "id":  13,
+        "name":  "Slim Fit Cargo Pants",
+        "price":  59.99,
+        "oldPrice":  79.99,
+        "category":  "men",
+        "badge":  "-25%",
+        "image":  "./asset/products/product-13.jpg"
     },
     {
-        "id": 14,
-        "name": "Winter Knit Sweater",
-        "price": 64.99,
-        "oldPrice": null,
-        "category": "women",
-        "badge": "New",
-        "image": "./asset/products/product-14.jpg"
+        "id":  14,
+        "name":  "Winter Knit Sweater",
+        "price":  64.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-14.jpg"
     },
     {
-        "id": 15,
-        "name": "Bomber Puffer Jacket",
-        "price": 99.99,
-        "oldPrice": 149.99,
-        "category": "jackets",
-        "badge": "-33%",
-        "image": "./asset/products/product-15.jpg"
+        "id":  15,
+        "name":  "Bomber Puffer Jacket",
+        "price":  99.99,
+        "oldPrice":  149.99,
+        "category":  "jackets",
+        "badge":  "-33%",
+        "image":  "./asset/products/product-15.jpg"
     },
     {
-        "id": 16,
-        "name": "Pullover Fleece Hoodie",
-        "price": 44.99,
-        "oldPrice": null,
-        "category": "hoodies",
-        "badge": "New",
-        "image": "./asset/products/product-16.jpg"
+        "id":  16,
+        "name":  "Graphic Print Tee",
+        "price":  44.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "./asset/products/product-16.jpg"
+    },
+    {
+        "id":  17,
+        "name":  "Quilted Parka Coat",
+        "price":  89.99,
+        "oldPrice":  129.99,
+        "category":  "jackets",
+        "badge":  "-31%",
+        "image":  "./asset/products/product-17.jpg"
+    },
+    {
+        "id":  18,
+        "name":  "Sherpa Lined Denim Jacket",
+        "price":  119.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-18.jpg"
+    },
+    {
+        "id":  19,
+        "name":  "Classic Leather Jacket",
+        "price":  109.99,
+        "oldPrice":  159.99,
+        "category":  "jackets",
+        "badge":  "-31%",
+        "image":  "./asset/products/product-19.jpg"
+    },
+    {
+        "id":  20,
+        "name":  "Winter Combat Boots",
+        "price":  84.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-20.jpg"
+    },
+    {
+        "id":  21,
+        "name":  "Zip Pocket Tee",
+        "price":  34.99,
+        "oldPrice":  54.99,
+        "category":  "tshirts",
+        "badge":  "-36%",
+        "image":  "./asset/products/product-21.jpg"
+    },
+    {
+        "id":  22,
+        "name":  "Sport Fleece Joggers",
+        "price":  49.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-22.jpg"
+    },
+    {
+        "id":  23,
+        "name":  "Bamboo Blend Tee",
+        "price":  24.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "./asset/products/product-23.jpg"
+    },
+    {
+        "id":  24,
+        "name":  "Heavyweight Puffer Vest",
+        "price":  79.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-24.jpg"
+    },
+    {
+        "id":  25,
+        "name":  "Trail Running Shoes",
+        "price":  99.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-25.jpg"
+    },
+    {
+        "id":  26,
+        "name":  "Wool Blend Peacoat",
+        "price":  99.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-26.jpg"
+    },
+    {
+        "id":  27,
+        "name":  "Cashmere Turtleneck",
+        "price":  54.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-27.jpg"
+    },
+    {
+        "id":  28,
+        "name":  "Insulated Ski Jacket",
+        "price":  179.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-28.jpg"
+    },
+    {
+        "id":  29,
+        "name":  "Stretch Denim Jacket",
+        "price":  89.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-29.jpg"
+    },
+    {
+        "id":  30,
+        "name":  "Flannel Lined Jeans",
+        "price":  64.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-30.jpg"
+    },
+    {
+        "id":  31,
+        "name":  "Lightweight Down Vest",
+        "price":  69.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-31.jpg"
+    },
+    {
+        "id":  32,
+        "name":  "Boxy Crop Tee",
+        "price":  59.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "./asset/products/product-32.jpg"
+    },
+    {
+        "id":  33,
+        "name":  "Rain Resistant Parka",
+        "price":  109.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-33.jpg"
+    },
+    {
+        "id":  34,
+        "name":  "Down Fill Vest",
+        "price":  89.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-34.jpg"
+    },
+    {
+        "id":  35,
+        "name":  "High Neck Fleece Pullover",
+        "price":  59.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-35.jpg"
+    },
+    {
+        "id":  36,
+        "name":  "Merino Wool Cardigan",
+        "price":  94.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-36.jpg"
+    },
+    {
+        "id":  37,
+        "name":  "Faux Fur Trim Coat",
+        "price":  134.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-37.jpg"
+    },
+    {
+        "id":  38,
+        "name":  "Heavyweight Parka",
+        "price":  189.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-38.jpg"
+    },
+    {
+        "id":  39,
+        "name":  "Performance Base Layer",
+        "price":  34.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-39.jpg"
+    },
+    {
+        "id":  40,
+        "name":  "Thermal Jogger Pants",
+        "price":  54.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-40.jpg"
+    },
+    {
+        "id":  41,
+        "name":  "Waxed Cotton Jacket",
+        "price":  149.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-41.jpg"
+    },
+    {
+        "id":  42,
+        "name":  "Fleece Lined Leggings",
+        "price":  44.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-42.jpg"
+    },
+    {
+        "id":  43,
+        "name":  "Thermal Henley Shirt",
+        "price":  39.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-43.jpg"
+    },
+    {
+        "id":  44,
+        "name":  "Tech Windbreaker",
+        "price":  109.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-44.jpg"
+    },
+    {
+        "id":  45,
+        "name":  "Oversized Knit Shawl",
+        "price":  54.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-45.jpg"
+    },
+    {
+        "id":  46,
+        "name":  "Cable Knit Sweater",
+        "price":  74.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-46.jpg"
+    },
+    {
+        "id":  47,
+        "name":  "Mountain Parka Pro",
+        "price":  159.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-47.jpg"
+    },
+    {
+        "id":  48,
+        "name":  "Hiking Boots Waterproof",
+        "price":  129.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-48.jpg"
+    },
+    {
+        "id":  49,
+        "name":  "Fleece Lined Boots",
+        "price":  119.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-49.jpg"
+    },
+    {
+        "id":  50,
+        "name":  "Quilted Crossbody Bag",
+        "price":  59.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-50.jpg"
+    },
+    {
+        "id":  51,
+        "name":  "Heavyweight Cable Knit",
+        "price":  64.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-51.jpg"
+    },
+    {
+        "id":  52,
+        "name":  "Vintage Wash Tee",
+        "price":  29.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "./asset/products/product-52.jpg"
+    },
+    {
+        "id":  53,
+        "name":  "Soft Shell Jacket",
+        "price":  94.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-53.jpg"
+    },
+    {
+        "id":  54,
+        "name":  "Wool Wrap Dress",
+        "price":  89.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-54.jpg"
+    },
+    {
+        "id":  55,
+        "name":  "Insulated Work Boots",
+        "price":  114.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-55.jpg"
+    },
+    {
+        "id":  56,
+        "name":  "Denim Trucker Jacket",
+        "price":  79.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-56.jpg"
+    },
+    {
+        "id":  57,
+        "name":  "Puffer Tote Bag",
+        "price":  44.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-57.jpg"
+    },
+    {
+        "id":  58,
+        "name":  "Canvas Work Pants",
+        "price":  54.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-58.jpg"
+    },
+    {
+        "id":  59,
+        "name":  "Fleece Cross-Back Top",
+        "price":  34.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-59.jpg"
+    },
+    {
+        "id":  60,
+        "name":  "Teddy Bear Coat",
+        "price":  134.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-60.jpg"
+    },
+    {
+        "id":  61,
+        "name":  "Ribbed Knit Midi Dress",
+        "price":  69.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-61.jpg"
+    },
+    {
+        "id":  62,
+        "name":  "Padded Shoulder Blazer",
+        "price":  109.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-62.jpg"
+    },
+    {
+        "id":  63,
+        "name":  "High Waist Thermal Pants",
+        "price":  39.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-63.jpg"
+    },
+    {
+        "id":  64,
+        "name":  "Oversized Wool Scarf",
+        "price":  34.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-64.jpg"
+    },
+    {
+        "id":  65,
+        "name":  "Oxford Winter Shirt",
+        "price":  44.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-65.jpg"
+    },
+    {
+        "id":  66,
+        "name":  "Relaxed Crew Tee",
+        "price":  59.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "./asset/products/product-66.jpg"
+    },
+    {
+        "id":  67,
+        "name":  "Heavyweight Parka Pro",
+        "price":  139.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-67.jpg"
+    },
+    {
+        "id":  68,
+        "name":  "Wool Midi Skirt",
+        "price":  54.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-68.jpg"
+    },
+    {
+        "id":  69,
+        "name":  "Wool Tweed Blazer",
+        "price":  124.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-69.jpg"
+    },
+    {
+        "id":  70,
+        "name":  "Fleece Quarter Zip",
+        "price":  49.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-70.jpg"
+    },
+    {
+        "id":  71,
+        "name":  "Canvas Work Jacket",
+        "price":  84.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-71.jpg"
+    },
+    {
+        "id":  72,
+        "name":  "Thermal Turtleneck Top",
+        "price":  29.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-72.jpg"
+    },
+    {
+        "id":  73,
+        "name":  "Ribbed Neck Tee",
+        "price":  19.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "./asset/products/product-73.jpg"
+    },
+    {
+        "id":  74,
+        "name":  "Double Breasted Coat",
+        "price":  149.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-74.jpg"
+    },
+    {
+        "id":  75,
+        "name":  "Fleece Track Jacket",
+        "price":  69.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-75.jpg"
+    },
+    {
+        "id":  76,
+        "name":  "Essential Cotton Tee",
+        "price":  24.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "./asset/products/product-76.jpg"
+    },
+    {
+        "id":  77,
+        "name":  "Leather Chelsea Boots",
+        "price":  109.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-77.jpg"
+    },
+    {
+        "id":  78,
+        "name":  "Padded Anorak Jacket",
+        "price":  119.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-78.jpg"
+    },
+    {
+        "id":  79,
+        "name":  "Pocket Tee",
+        "price":  14.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "./asset/products/product-79.jpg"
+    },
+    {
+        "id":  80,
+        "name":  "Corduroy Overshirt",
+        "price":  59.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-80.jpg"
+    },
+    {
+        "id":  81,
+        "name":  "Heavyweight Tee",
+        "price":  22.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "./asset/products/product-81.jpg"
+    },
+    {
+        "id":  82,
+        "name":  "Woolannel Trousers",
+        "price":  64.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-82.jpg"
+    },
+    {
+        "id":  83,
+        "name":  "Puffer Rain Jacket",
+        "price":  99.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-83.jpg"
+    },
+    {
+        "id":  84,
+        "name":  "Thermal Ski Pants",
+        "price":  79.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-84.jpg"
+    },
+    {
+        "id":  85,
+        "name":  "Merino Wool Tee",
+        "price":  27.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "./asset/products/product-85.jpg"
+    },
+    {
+        "id":  86,
+        "name":  "Sherpa Fleece Jacket",
+        "price":  89.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-86.jpg"
+    },
+    {
+        "id":  87,
+        "name":  "Down Insulated Parka",
+        "price":  169.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-87.jpg"
+    },
+    {
+        "id":  88,
+        "name":  "Wool Overcoat Classic",
+        "price":  139.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-88.jpg"
+    },
+    {
+        "id":  89,
+        "name":  "Fleece Jogger Set",
+        "price":  74.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-89.jpg"
+    },
+    {
+        "id":  90,
+        "name":  "Quilted Vest Gilet",
+        "price":  64.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-90.jpg"
+    },
+    {
+        "id":  91,
+        "name":  "Winter Hiking Boots",
+        "price":  124.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-91.jpg"
+    },
+    {
+        "id":  92,
+        "name":  "Fleece Hooded Cardigan",
+        "price":  59.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-92.jpg"
+    },
+    {
+        "id":  93,
+        "name":  "Waterproof Trail Boots",
+        "price":  109.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-93.jpg"
+    },
+    {
+        "id":  94,
+        "name":  "Cable Knit Cardigan",
+        "price":  79.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-94.jpg"
+    },
+    {
+        "id":  95,
+        "name":  "Insulated Running Jacket",
+        "price":  114.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-95.jpg"
+    },
+    {
+        "id":  96,
+        "name":  "Sherpa Lined Vest",
+        "price":  54.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "./asset/products/product-96.jpg"
+    },
+    {
+        "id":  97,
+        "name":  "Thermal Base Set",
+        "price":  49.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-97.jpg"
+    },
+    {
+        "id":  98,
+        "name":  "Wool Blend Poncho",
+        "price":  84.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-98.jpg"
+    },
+    {
+        "id":  99,
+        "name":  "Performance Fleece Vest",
+        "price":  59.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "./asset/products/product-99.jpg"
+    },
+    {
+        "id":  100,
+        "name":  "Quilted Winter Boots",
+        "price":  94.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "./asset/products/product-100.jpg"
     }
 ]
