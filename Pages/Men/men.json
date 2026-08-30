@@ -1,0 +1,227 @@
+﻿[
+    {
+        "id":  1,
+        "name":  "Classic Wool Overcoat",
+        "price":  89.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-01.jpg"
+    },
+    {
+        "id":  4,
+        "name":  "Classic Crew Tee",
+        "price":  49.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  null,
+        "image":  "../../asset/products/product-04.jpg"
+    },
+    {
+        "id":  5,
+        "name":  "Knit Crewneck Sweater",
+        "price":  39.99,
+        "oldPrice":  59.99,
+        "category":  "men",
+        "badge":  "-33%",
+        "image":  "../../asset/products/product-05.jpg"
+    },
+    {
+        "id":  9,
+        "name":  "Arctic Down Jacket",
+        "price":  109.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-09.jpg"
+    },
+    {
+        "id":  13,
+        "name":  "Slim Fit Cargo Pants",
+        "price":  59.99,
+        "oldPrice":  79.99,
+        "category":  "men",
+        "badge":  "-25%",
+        "image":  "../../asset/products/product-13.jpg"
+    },
+    {
+        "id":  17,
+        "name":  "Quilted Parka Coat",
+        "price":  89.99,
+        "oldPrice":  129.99,
+        "category":  "men",
+        "badge":  "-31%",
+        "image":  "../../asset/products/product-17.jpg"
+    },
+    {
+        "id":  20,
+        "name":  "Winter Combat Boots",
+        "price":  84.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-20.jpg"
+    },
+    {
+        "id":  23,
+        "name":  "Bamboo Blend Tee",
+        "price":  24.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "../../asset/products/product-23.jpg"
+    },
+    {
+        "id":  25,
+        "name":  "Trail Running Shoes",
+        "price":  99.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-25.jpg"
+    },
+    {
+        "id":  30,
+        "name":  "Flannel Lined Jeans",
+        "price":  44.99,
+        "oldPrice":  64.99,
+        "category":  "men",
+        "badge":  "-31%",
+        "image":  "../../asset/products/product-30.jpg"
+    },
+    {
+        "id":  35,
+        "name":  "High Neck Fleece Pullover",
+        "price":  59.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-35.jpg"
+    },
+    {
+        "id":  39,
+        "name":  "Performance Base Layer",
+        "price":  34.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-39.jpg"
+    },
+    {
+        "id":  40,
+        "name":  "Thermal Jogger Pants",
+        "price":  34.99,
+        "oldPrice":  54.99,
+        "category":  "men",
+        "badge":  "-36%",
+        "image":  "../../asset/products/product-40.jpg"
+    },
+    {
+        "id":  43,
+        "name":  "Thermal Henley Shirt",
+        "price":  39.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-43.jpg"
+    },
+    {
+        "id":  48,
+        "name":  "Hiking Boots Waterproof",
+        "price":  89.99,
+        "oldPrice":  129.99,
+        "category":  "men",
+        "badge":  "-31%",
+        "image":  "../../asset/products/product-48.jpg"
+    },
+    {
+        "id":  51,
+        "name":  "Heavyweight Cable Knit",
+        "price":  64.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-51.jpg"
+    },
+    {
+        "id":  53,
+        "name":  "Soft Shell Jacket",
+        "price":  94.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-53.jpg"
+    },
+    {
+        "id":  55,
+        "name":  "Insulated Work Boots",
+        "price":  114.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-55.jpg"
+    },
+    {
+        "id":  56,
+        "name":  "Denim Trucker Jacket",
+        "price":  79.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-56.jpg"
+    },
+    {
+        "id":  65,
+        "name":  "Oxford Winter Shirt",
+        "price":  44.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-65.jpg"
+    },
+    {
+        "id":  67,
+        "name":  "Heavyweight Parka",
+        "price":  139.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-67.jpg"
+    },
+    {
+        "id":  69,
+        "name":  "Wool Tweed Blazer",
+        "price":  124.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-69.jpg"
+    },
+    {
+        "id":  71,
+        "name":  "Canvas Work Jacket",
+        "price":  84.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-71.jpg"
+    },
+    {
+        "id":  73,
+        "name":  "Ribbed Neck Tee",
+        "price":  19.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "../../asset/products/product-73.jpg"
+    },
+    {
+        "id":  75,
+        "name":  "Fleece Track Jacket",
+        "price":  69.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-75.jpg"
+    }
+]

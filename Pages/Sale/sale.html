@@ -1,45 +1,44 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FrostWear</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Home.css">
+    <title>Winter Sale | FrostWear</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="sale.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  
 
     <nav class="top-nav">
         <!-- Logo -->
         <div class="logo">
-            <img src="./asset/logo.png" alt="FrostWear Logo">
+            <a href="../index.html"><img src="../../asset/logo.png" alt="FrostWear Logo"></a>
         </div>
 
         <!-- Search Bar -->
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="Search for products...">
             <button id="searchBtn">
-                <img src="./asset/search.svg" alt="Search">
+                <img src="../../asset/search.svg" alt="Search">
             </button>
         </div>
 
         <!-- Right side -->
         <div class="actions">
             <a href="#" class="action-item" id="accountNav">
-                <img src="./asset/circle-user.svg" alt="User">
+                <img src="../../asset/circle-user.svg" alt="User">
                 <span>Account</span>
             </a>
             <a href="#" class="action-item" id="wishlistNav">
-                <img src="./asset/heart.svg" alt="Wishlist">
+                <img src="../../asset/heart.svg" alt="Wishlist">
                 <span>Wishlist</span>
                 <span class="cart-count" id="wishlistCount" style="display:none">0</span>
             </a>
             <a href="#" class="action-item" id="cartNav">
-                <img src="./asset/shopping-cart.svg" alt="Cart">
+                <img src="../../asset/shopping-cart.svg" alt="Cart">
                 <span>Cart</span>
                 <span class="cart-count" id="cartCount" style="display:none">0</span>
             </a>
@@ -50,138 +49,37 @@
         <ul>
             <li>
                 <a href="#" class="categories">
-                    <img src="./asset/menu.svg" alt="Menu">
+                    <img src="../../asset/menu.svg" alt="Menu">
                     <span>Categories</span>
                 </a>
             </li>
-            <li><a href="#" data-filter="all">Home</a></li>
-            <li><a href="#" data-filter="sale">Sale</a></li>
-            <li><a href="#" data-filter="new">New Arrivals</a></li>
-            <li><a href="#" data-filter="men">Men</a></li>
-            <li><a href="#" data-filter="women">Women</a></li>            
-            <li><a href="AboutUs.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="../../index.html" id="nav-home">Home</a></li>
+            <li><a href="sale.html" id="nav-sale" class="active">Sale</a></li>
+            <li><a href="../../Pages/NewArrivals/newArrivals.html">New Arrivals</a></li>
+            <li><a href="../../Pages/Men/men.html" id="nav-men">Men</a></li>
+            <li><a href="../../Pages/Women/women.html" id="nav-women">Women</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-slides">
-            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=1600&q=80');">
-                <div class="hero-overlay"></div>
-                <div class="hero-content">
-                    <span class="hero-tag">New In</span>
-                    <h1>Fall/Winter<br>Collection 2026</h1>
-                    <p>Discover the latest trends in premium winter fashion</p>
-                    <div class="hero-buttons">
-                        <a href="#featured" class="btn btn-primary">Shop Now</a>
-                        <a href="#new-arrivals" class="btn btn-outline">View Lookbook</a>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600&q=80');">
-                <div class="hero-overlay"></div>
-                <div class="hero-content">
-                    <span class="hero-tag">Up to 40% Off</span>
-                    <h1>Winter<br>Clearance Sale</h1>
-                    <p>Limited time offers on selected styles</p>
-                    <div class="hero-buttons">
-                        <a href="#sale" class="btn btn-primary">Shop Sale</a>
-                        <a href="#featured" class="btn btn-outline">See All Deals</a>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1445205170230-053b83016050?w=1600&q=80');">
-                <div class="hero-overlay"></div>
-                <div class="hero-content">
-                    <span class="hero-tag">Best Sellers</span>
-                    <h1>The Essentials<br>Edit</h1>
-                    <p>Timeless pieces for every winter wardrobe</p>
-                    <div class="hero-buttons">
-                        <a href="#featured" class="btn btn-primary">Explore Now</a>
-                        <a href="#about" class="btn btn-outline">Our Story</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-dots">
-            <span class="dot active" data-index="0"></span>
-            <span class="dot" data-index="1"></span>
-            <span class="dot" data-index="2"></span>
-        </div>
-        <button class="hero-arrow hero-arrow-left">&#10094;</button>
-        <button class="hero-arrow hero-arrow-right">&#10095;</button>
-    </section>
-
-    <!-- Categories Section -->
-    <section class="categories-section">
-        <h2 class="section-title">Shop by Category</h2>
-        <div class="categories-grid">
-            <a href="#" class="category-card" data-filter="men">
-                <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600&q=80');"></div>
-                <div class="category-overlay">
-                    <h3>Men</h3>
-                    <span>Shop Now &#8594;</span>
-                </div>
-            </a>
-            <a href="#" class="category-card" data-filter="women">
-                <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&q=80');"></div>
-                <div class="category-overlay">
-                    <h3>Women</h3>
-                    <span>Shop Now &#8594;</span>
-                </div>
-            </a>
-            <a href="#" class="category-card" data-filter="jackets">
-                <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&q=80');"></div>
-                <div class="category-overlay">
-                    <h3>Jackets</h3>
-                    <span>Shop Now &#8594;</span>
-                </div>
-            </a>
-            <a href="#" class="category-card" data-filter="tshirts">
-                <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80');"></div>
-                <div class="category-overlay">
-                    <h3>T-Shirts</h3>
-                    <span>Shop Now &#8594;</span>
-                </div>
-            </a>
+    <!-- Sale Hero -->
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <span class="hero-tag">Limited Time Only</span>
+            <h1>Winter Sale</h1>
+            <p>Up to 33% off premium winter gear</p>
+            <a href="#saleItems" class="btn btn-primary">Shop Now</a>
         </div>
     </section>
 
-    <!-- Featured Products -->
-    <section class="featured-section" id="featured">
-        <div class="section-header">
-            <h2 class="section-title" id="productSectionTitle">Featured Products</h2>
-            <div class="filter-tabs">
-                <button class="filter-tab active" data-filter="all">All</button>
-                <button class="filter-tab" data-filter="men">Men</button>
-                <button class="filter-tab" data-filter="women">Women</button>
-                <button class="filter-tab" data-filter="jackets">Jackets</button>
-                <button class="filter-tab" data-filter="tshirts">T-Shirts</button>
-            </div>
-        </div>
+    <!-- Sale Products -->
+    <section class="sale-products-section" id="saleItems">
+        <h2 class="section-title">Sale Items</h2>
+        <p class="section-subtitle">Grab these deals before they melt away</p>
         <div class="products-grid" id="productsGrid"></div>
-    </section>
-
-    <!-- Sale Section -->
-    <section class="sale-section" id="sale">
-        <div class="sale-banner">
-            <div class="sale-text">
-                <span class="sale-tag">Limited Offer</span>
-                <h2>Winter Clearance Sale</h2>
-                <p>Up to <strong>40% OFF</strong> on selected items</p>
-                <a href="#featured" class="btn btn-primary">Shop Sale</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- New Arrivals -->
-    <section class="new-arrivals-section" id="new-arrivals">
-        <div class="section-header">
-            <h2 class="section-title">New Arrivals</h2>
-            <a href="#featured" class="view-all">View All &#8594;</a>
-        </div>
-        <div class="products-grid" id="newArrivalsGrid"></div>
+        <div class="search-results" id="searchResults" style="display:none"></div>
     </section>
 
     <!-- Newsletter -->
@@ -247,11 +145,6 @@
         </div>
     </div>
 
-    <!-- Search Results Section -->
-    <section class="search-results-section" id="searchResultsSection" style="display:none">
-        <div class="search-results" id="searchResults"></div>
-    </section>
-
     <!-- Account Modal -->
     <div class="modal-overlay" id="accountOverlay"></div>
     <div class="account-modal" id="accountModal">
@@ -295,15 +188,15 @@
         <div class="row1">
 
             <div class="footer-image-holder">
-                <a href="index.html"><img src="./asset/FrostWearLogo.png" style="height:150px; width:320px"></a>
+                <a href="../index.html"><img src="../../asset/FrostWearLogo.png" style="height:150px; width:320px"></a>
                 <p style="font-weight:bold;">Stay Warm. Stay Stylish.</p>
                 <p style="color:white;max-width: 260px;">Premuim winter clothing designed for comfort ,durability, and everyday adventures.</p>
                 <div class="social-media-holder">
-                     <a href="https://www.instagram.com/?hl=en" target="_blank"><img src="./asset/Instagram.png"></a>
-                     <a href="https://www.facebook.com/" target="_blank"><img src="./asset/Facebook.png"></a>
-                     <a href="https://www.tiktok.com/" target="_blank"><img src="./asset/Tiktok.png"></a>
-                     <a href="https://x.com/" target="_blank"><img src="./asset/X.png"></a>
-                     <a href="https://www.youtube.com/" target="_blank"><img src="./asset/Youtube.png"></a>
+                     <a href="https://www.instagram.com/?hl=en" target="_blank"><img src="../../asset/Instagram.png"></a>
+                     <a href="https://www.facebook.com/" target="_blank"><img src="../../asset/Facebook.png"></a>
+                     <a href="https://www.tiktok.com/" target="_blank"><img src="../../asset/Tiktok.png"></a>
+                     <a href="https://x.com/" target="_blank"><img src="../../asset/X.png"></a>
+                     <a href="https://www.youtube.com/" target="_blank"><img src="../../asset/Youtube.png"></a>
                 </div>
             </div>
             
@@ -347,7 +240,7 @@
 
         <div class="row2">
             <div class="footer-feature">
-                <img class="footer-feature-image" src="./asset/Security.png" >
+                <img class="footer-feature-image" src="../../asset/Security.png" >
                 <div class="footer-feature-text">
                     <h3>SECURE<h3>
                     <p>100% safe & secure</p>
@@ -355,7 +248,7 @@
             </div>
 
             <div class="footer-feature">
-                <img class="footer-feature-image" src="./asset/Van.png" >
+                <img class="footer-feature-image" src="../../asset/Van.png" >
                 <div class="footer-feature-text">
                     <h3>FAST DELIVERY<h3>
                     <p>Quick & reliable shipping</p>
@@ -363,7 +256,7 @@
             </div>
 
             <div class="footer-feature">
-                <img class="footer-feature-image" src="./asset/EasyReturn.png" >
+                <img class="footer-feature-image" src="../../asset/EasyReturn.png" >
                 <div class="footer-feature-text">
                     <h3>EASY RETURNS<h3>
                     <p>Hassle free returns</p>
@@ -371,7 +264,7 @@
             </div>
 
             <div class="footer-feature">
-                <img class="footer-feature-image" src="./asset/Medal.png" >
+                <img class="footer-feature-image" src="../../asset/Medal.png" >
                 <div class="footer-feature-text">
                     <h3>PREMIUM QUALITY<h3>
                     <p>Build to last, made for you</p>
@@ -379,7 +272,7 @@
             </div>
 
             <div class="footer-feature">
-                <img class="footer-feature-image" src="./asset/Headphone.png" >
+                <img class="footer-feature-image" src="../../asset/Headphone.png" >
                 <div class="footer-feature-text">
                     <h3>CUSTOMER SUPPORT<h3>
                     <p>We are here to help you</p>
@@ -393,12 +286,12 @@
                 <p style="color: whitesmoke;font-size:18px;font-weight: 600;font-family: Arial, 
                 Helvetica, sans-serif; margin-bottom: 15px;">WE ACCEPT</p>
                 <div class="footer-image-economy">
-                    <img src="./asset/Visa.png">
-                    <img src="./asset/VennDiagram.png">
-                    <img src="./asset/ESewa.png">
-                    <img src="./asset/Khalti.png">
-                    <img src="./asset/FonePay.png">
-                    <img src="./asset/PayPal.png">
+                    <img src="../../asset/Visa.png">
+                    <img src="../../asset/VennDiagram.png">
+                    <img src="../../asset/ESewa.png">
+                    <img src="../../asset/Khalti.png">
+                    <img src="../../asset/FonePay.png">
+                    <img src="../../asset/PayPal.png">
                 </div>
             </div>
             
@@ -407,10 +300,10 @@
                 <p style="color: whitesmoke;font-size:18px;font-weight: 600;font-family: Arial, 
                 Helvetica, sans-serif; margin-bottom: 15px;">DELIVERY PARTNERS</p>
                 <div class="footer-image-economy">
-                    <img src="./asset/NepalCanMove.png">
-                    <img src="./asset/Pathao.png">
-                    <img src="./asset/LocalCourier.png">
-                    <img src="./asset/DHL.png">
+                    <img src="../../asset/NepalCanMove.png">
+                    <img src="../../asset/Pathao.png">
+                    <img src="../../asset/LocalCourier.png">
+                    <img src="../../asset/DHL.png">
                 </div>
             </div>
 
@@ -420,7 +313,7 @@
 
         <div class="row4">
             <div style="display: flex;">
-                <img src="./asset/Frost.png" style="height: 70px;width: 70px;">
+                <img src="../../asset/Frost.png" style="height: 70px;width: 70px;">
                 <p> &copy; 2026 <span style="color: green;font-weight: 600;">FrostWear</span> . All Rights Reserved </p>
             </div>
 
@@ -440,6 +333,6 @@
 
 </footer>
 
-    <script src="home.js"></script>
+    <script src="sale.js"></script>
 </body>
 </html>

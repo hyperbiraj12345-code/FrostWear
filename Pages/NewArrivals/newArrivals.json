@@ -1,0 +1,227 @@
+﻿[
+    {
+        "id":  4,
+        "name":  "Classic Crew Tee",
+        "price":  49.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "../../asset/products/product-04.jpg"
+    },
+    {
+        "id":  6,
+        "name":  "Quilted Vest Jacket",
+        "price":  94.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-06.jpg"
+    },
+    {
+        "id":  8,
+        "name":  "Premium Leather Jacket",
+        "price":  139.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "../../asset/products/product-08.jpg"
+    },
+    {
+        "id":  9,
+        "name":  "Arctic Down Jacket",
+        "price":  109.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-09.jpg"
+    },
+    {
+        "id":  10,
+        "name":  "Cashmere Blend Cardigan",
+        "price":  74.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-10.jpg"
+    },
+    {
+        "id":  11,
+        "name":  "Waterproof Shell Jacket",
+        "price":  129.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "../../asset/products/product-11.jpg"
+    },
+    {
+        "id":  12,
+        "name":  "Thermal Long Sleeve Tee",
+        "price":  54.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "../../asset/products/product-12.jpg"
+    },
+    {
+        "id":  14,
+        "name":  "Winter Knit Sweater",
+        "price":  64.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-14.jpg"
+    },
+    {
+        "id":  16,
+        "name":  "Graphic Print Tee",
+        "price":  44.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "../../asset/products/product-16.jpg"
+    },
+    {
+        "id":  18,
+        "name":  "Sherpa Lined Denim Jacket",
+        "price":  119.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "../../asset/products/product-18.jpg"
+    },
+    {
+        "id":  20,
+        "name":  "Winter Combat Boots",
+        "price":  84.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-20.jpg"
+    },
+    {
+        "id":  22,
+        "name":  "Sport Fleece Joggers",
+        "price":  49.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-22.jpg"
+    },
+    {
+        "id":  23,
+        "name":  "Bamboo Blend Tee",
+        "price":  24.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "../../asset/products/product-23.jpg"
+    },
+    {
+        "id":  24,
+        "name":  "Heavyweight Puffer Vest",
+        "price":  79.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "../../asset/products/product-24.jpg"
+    },
+    {
+        "id":  25,
+        "name":  "Trail Running Shoes",
+        "price":  99.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-25.jpg"
+    },
+    {
+        "id":  29,
+        "name":  "Stretch Denim Jacket",
+        "price":  89.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "../../asset/products/product-29.jpg"
+    },
+    {
+        "id":  31,
+        "name":  "Lightweight Down Vest",
+        "price":  69.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "../../asset/products/product-31.jpg"
+    },
+    {
+        "id":  33,
+        "name":  "Rain Resistant Parka",
+        "price":  109.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "../../asset/products/product-33.jpg"
+    },
+    {
+        "id":  35,
+        "name":  "High Neck Fleece Pullover",
+        "price":  59.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-35.jpg"
+    },
+    {
+        "id":  37,
+        "name":  "Faux Fur Trim Coat",
+        "price":  134.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-37.jpg"
+    },
+    {
+        "id":  39,
+        "name":  "Performance Base Layer",
+        "price":  34.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-39.jpg"
+    },
+    {
+        "id":  41,
+        "name":  "Waxed Cotton Jacket",
+        "price":  149.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "../../asset/products/product-41.jpg"
+    },
+    {
+        "id":  43,
+        "name":  "Thermal Henley Shirt",
+        "price":  39.99,
+        "oldPrice":  null,
+        "category":  "men",
+        "badge":  "New",
+        "image":  "../../asset/products/product-43.jpg"
+    },
+    {
+        "id":  45,
+        "name":  "Oversized Knit Shawl",
+        "price":  54.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-45.jpg"
+    },
+    {
+        "id":  47,
+        "name":  "Mountain Parka Pro",
+        "price":  159.99,
+        "oldPrice":  null,
+        "category":  "jackets",
+        "badge":  "New",
+        "image":  "../../asset/products/product-47.jpg"
+    }
+]
