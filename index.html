@@ -21,15 +21,15 @@
 
         <!-- Search Bar -->
         <div class="search-box">
-            <input type="text" placeholder="Search for products...">
-            <button>
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <button id="searchBtn">
                 <img src="./asset/search.svg" alt="Search">
             </button>
         </div>
 
         <!-- Right side -->
         <div class="actions">
-            <a href="#" class="action-item">
+            <a href="#" class="action-item" id="accountNav">
                 <img src="./asset/circle-user.svg" alt="User">
                 <span>Account</span>
             </a>
@@ -54,11 +54,11 @@
                     <span>Categories</span>
                 </a>
             </li>
-            <li><a href="#" data-filter="all">Home</a></li>
-            <li><a href="#" data-filter="sale">Sale</a></li>
-            <li><a href="#" data-filter="new">New Arrivals</a></li>
-            <li><a href="#" data-filter="men">Men</a></li>
-            <li><a href="#" data-filter="women">Women</a></li>            
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Pages/Sale/sale.html">Sale</a></li>
+            <li><a href="Pages/NewArrivals/newArrivals.html">New Arrivals</a></li>
+            <li><a href="Pages/Men/men.html">Men</a></li>
+            <li><a href="Pages/Women/women.html">Women</a></li>            
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
@@ -67,7 +67,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-slides">
-            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1600&q=80');">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=1600&q=80');">
                 <div class="hero-overlay"></div>
                 <div class="hero-content">
                     <span class="hero-tag">New In</span>
@@ -138,10 +138,10 @@
                     <span>Shop Now &#8594;</span>
                 </div>
             </a>
-            <a href="#" class="category-card" data-filter="hoodies">
-                <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1556821840-3a63f7560068?w=600&q=80');"></div>
+            <a href="#" class="category-card" data-filter="tshirts">
+                <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80');"></div>
                 <div class="category-overlay">
-                    <h3>Hoodies</h3>
+                    <h3>T-Shirts</h3>
                     <span>Shop Now &#8594;</span>
                 </div>
             </a>
@@ -157,7 +157,7 @@
                 <button class="filter-tab" data-filter="men">Men</button>
                 <button class="filter-tab" data-filter="women">Women</button>
                 <button class="filter-tab" data-filter="jackets">Jackets</button>
-                <button class="filter-tab" data-filter="hoodies">Hoodies</button>
+                <button class="filter-tab" data-filter="tshirts">T-Shirts</button>
             </div>
         </div>
         <div class="products-grid" id="productsGrid"></div>
@@ -236,6 +236,57 @@
         <p id="toastMessage">Item added to cart!</p>
     </div>
 
+    <!-- Confirm Dialog -->
+    <div class="modal-overlay" id="confirmOverlay"></div>
+    <div class="confirm-dialog" id="confirmDialog">
+        <h3>Are you sure?</h3>
+        <p id="confirmMessage">Do you want to remove this item?</p>
+        <div class="confirm-actions">
+            <button class="btn btn-ghost" id="confirmNo">Cancel</button>
+            <button class="btn btn-primary" id="confirmYes">Remove</button>
+        </div>
+    </div>
+
+    <!-- Search Results Section -->
+    <section class="search-results-section" id="searchResultsSection" style="display:none">
+        <div class="search-results" id="searchResults"></div>
+    </section>
+
+    <!-- Account Modal -->
+    <div class="modal-overlay" id="accountOverlay"></div>
+    <div class="account-modal" id="accountModal">
+        <button class="drawer-close account-close" id="accountClose">&times;</button>
+        <div id="accountLoggedOut">
+            <h3>Welcome to FrostWear</h3>
+            <p class="account-sub">Sign in or create an account</p>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email address" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit" class="btn btn-primary account-btn">Sign In</button>
+            </form>
+            <p class="account-switch">Don't have an account? <a href="#" id="showRegister">Create one</a></p>
+            <form id="registerForm" style="display:none">
+                <input type="text" id="regName" placeholder="Full name" required>
+                <input type="email" id="regEmail" placeholder="Email address" required>
+                <input type="password" id="regPassword" placeholder="Password" required>
+                <button type="submit" class="btn btn-primary account-btn">Create Account</button>
+            </form>
+            <p class="account-switch" id="backToLoginWrap" style="display:none"><a href="#" id="backToLogin">Back to sign in</a></p>
+        </div>
+        <div id="accountLoggedIn" style="display:none">
+            <h3>My Account</h3>
+            <p class="account-sub">Signed in as <span id="accountEmailDisplay"></span></p>
+            <div class="account-info">
+                <p><strong>Name:</strong> <span id="accountNameDisplay"></span></p>
+            </div>
+            <div class="account-stats">
+                <div class="account-stat"><h4 id="accountWishlistCount">0</h4><p>Wishlist</p></div>
+                <div class="account-stat"><h4 id="accountCartCount">0</h4><p>Cart Items</p></div>
+            </div>
+            <button class="btn btn-ghost account-btn" id="logoutBtn">Sign Out</button>
+        </div>
+    </div>
+
 
 <footer>
     <!--  Main Footer Conatiner -->
@@ -244,7 +295,7 @@
         <div class="row1">
 
             <div class="footer-image-holder">
-                <a href=""><img src="./asset/FrostWearLogo.png" style="height:150px; width:320px"></a>
+                <a href="index.html"><img src="./asset/FrostWearLogo.png" style="height:150px; width:320px"></a>
                 <p style="font-weight:bold;">Stay Warm. Stay Stylish.</p>
                 <p style="color:white;max-width: 260px;">Premuim winter clothing designed for comfort ,durability, and everyday adventures.</p>
                 <div class="social-media-holder">
@@ -261,7 +312,7 @@
                 <li><a>Men</a></li>
                 <li><a>Women</a></li>
                 <li><a>Jackets</a></li>
-                <li><a>Hoodies</a></li>
+                <li><a>T-Shirts</a></li>
                 <li><a>Sweaters</a></li>
             </ul>
 

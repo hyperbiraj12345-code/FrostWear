@@ -48,6 +48,36 @@ function showToast(message) {
     setTimeout(() => toast.classList.remove('show'), 2500);
 }
 
+// ===== CONFIRM DIALOG =====
+const confirmDialog = document.getElementById('confirmDialog');
+const confirmOverlay = document.getElementById('confirmOverlay');
+const confirmMessage = document.getElementById('confirmMessage');
+const confirmYes = document.getElementById('confirmYes');
+const confirmNo = document.getElementById('confirmNo');
+let confirmCallback = null;
+
+function askConfirm(message, callback) {
+    confirmMessage.textContent = message;
+    confirmCallback = callback;
+    confirmDialog.classList.add('show');
+    confirmOverlay.classList.add('show');
+}
+
+function closeConfirm() {
+    confirmDialog.classList.remove('show');
+    confirmOverlay.classList.remove('show');
+    confirmCallback = null;
+}
+
+confirmYes.addEventListener('click', () => {
+    const cb = confirmCallback;
+    closeConfirm();
+    if (cb) cb();
+});
+
+confirmNo.addEventListener('click', closeConfirm);
+confirmOverlay.addEventListener('click', closeConfirm);
+
 // ===== CART =====
 const cartCountEl = document.getElementById('cartCount');
 const cartNav = document.getElementById('cartNav');
@@ -86,9 +116,14 @@ function addToCart(productId) {
 }
 
 function removeFromCart(productId) {
-    cart = cart.filter(item => item.id !== productId);
-    saveCart();
-    renderCart();
+    const item = cart.find(i => i.id === productId);
+    const label = item ? item.name : 'this item';
+    askConfirm('Remove "' + label + '" from your cart?', () => {
+        cart = cart.filter(i => i.id !== productId);
+        saveCart();
+        renderCart();
+        showToast('Removed from cart');
+    });
 }
 
 function changeQty(productId, delta) {
@@ -304,8 +339,8 @@ async function loadProducts() {
     const res = await fetch('products.json');
     allProducts = await res.json();
 
-    const featured = allProducts.slice(0, 8);
-    const newArrivals = allProducts.slice(8, 12);
+    const featured = allProducts.slice(0, 20);
+    const newArrivals = allProducts.filter(p => p.badge === 'New').slice(0, 12);
 
     renderProducts(featured, productsGrid);
     renderProducts(newArrivals, newArrivalsGrid);
@@ -361,14 +396,29 @@ function renderProducts(products, container) {
     });
 }
 
+function bindGrid(container) {
+    container.addEventListener('click', (e) => {
+        const addBtn = e.target.closest('.add-to-cart');
+        if (addBtn) {
+            addToCart(parseInt(addBtn.dataset.id));
+            return;
+        }
+        const wishBtn = e.target.closest('.wishlist-btn');
+        if (wishBtn) {
+            e.stopPropagation();
+            toggleWishlist(parseInt(wishBtn.dataset.id));
+        }
+    });
+}
+
 // ===== FILTER TABS =====
 const filterTabs = document.querySelectorAll('.filter-tab');
 const sectionTitle = document.getElementById('productSectionTitle');
 
 function filterProducts(category) {
     const visible = category === 'all'
-        ? allProducts.slice(0, 8)
-        : allProducts.filter(p => p.category === category).slice(0, 8);
+        ? allProducts.slice(0, 20)
+        : allProducts.filter(p => p.category === category).slice(0, 20);
 
     renderProducts(visible, productsGrid);
 
@@ -381,7 +431,7 @@ function filterProducts(category) {
         men: 'Men\'s Collection',
         women: 'Women\'s Collection',
         jackets: 'Jackets',
-        hoodies: 'Hoodies'
+        tshirts: 'T-Shirts'
     };
     sectionTitle.textContent = titles[category] || 'Featured Products';
 }
@@ -390,25 +440,8 @@ filterTabs.forEach(tab => {
     tab.addEventListener('click', () => filterProducts(tab.dataset.filter));
 });
 
-// ===== BOTTOM NAV FILTER LINKS =====
-document.querySelectorAll('.bottom-nav a[data-filter]').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const filter = link.dataset.filter;
-
-        if (filter === 'all') {
-            document.getElementById('featured').scrollIntoView({ behavior: 'smooth' });
-            filterProducts('all');
-        } else if (filter === 'sale') {
-            document.getElementById('sale').scrollIntoView({ behavior: 'smooth' });
-        } else if (filter === 'new') {
-            document.getElementById('new-arrivals').scrollIntoView({ behavior: 'smooth' });
-        } else {
-            document.getElementById('featured').scrollIntoView({ behavior: 'smooth' });
-            filterProducts(filter);
-        }
-    });
-});
+// ===== BOTTOM NAV LINKS =====
+// Navigation now goes to separate pages (no JS needed)
 
 // ===== CATEGORY CARDS =====
 document.querySelectorAll('.category-card').forEach(card => {
@@ -418,6 +451,157 @@ document.querySelectorAll('.category-card').forEach(card => {
         document.getElementById('featured').scrollIntoView({ behavior: 'smooth' });
         setTimeout(() => filterProducts(filter), 400);
     });
+});
+
+// ===== SEARCH =====
+const searchInput = document.getElementById('searchInput');
+const searchBtn = document.getElementById('searchBtn');
+const searchResultsSection = document.getElementById('searchResultsSection');
+const searchResults = document.getElementById('searchResults');
+const searchResultsGrid = document.createElement('div');
+searchResultsGrid.className = 'products-grid';
+searchResults.appendChild(searchResultsGrid);
+bindGrid(searchResultsGrid);
+
+function performSearch() {
+    const query = searchInput.value.trim().toLowerCase();
+    if (!query) {
+        showToast('Please enter a search term');
+        return;
+    }
+    const results = allProducts.filter(p =>
+        p.name.toLowerCase().includes(query) ||
+        p.category.toLowerCase().includes(query)
+    );
+
+    searchResultsSection.style.display = 'block';
+    document.getElementById('searchResultsSection').scrollIntoView({ behavior: 'smooth' });
+
+    if (results.length === 0) {
+        searchResultsGrid.innerHTML = '<p class="no-results">No products match "' + searchInput.value.trim() + '".</p>';
+        return;
+    }
+
+    const bar = document.createElement('div');
+    bar.className = 'result-bar';
+    bar.innerHTML = '<h3>' + results.length + ' result(s) for "' + searchInput.value.trim() + '"</h3><button class="back-btn">Clear Search</button>';
+    searchResults.innerHTML = '';
+    searchResults.appendChild(bar);
+    searchResults.appendChild(searchResultsGrid);
+    renderProducts(results, searchResultsGrid);
+    updateWishlistButtons();
+
+    bar.querySelector('.back-btn').addEventListener('click', () => {
+        searchResultsSection.style.display = 'none';
+        searchInput.value = '';
+    });
+}
+
+searchBtn.addEventListener('click', (e) => { e.preventDefault(); performSearch(); });
+searchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); performSearch(); } });
+
+// ===== ACCOUNT =====
+const accountNav = document.getElementById('accountNav');
+const accountModal = document.getElementById('accountModal');
+const accountOverlay = document.getElementById('accountOverlay');
+const accountClose = document.getElementById('accountClose');
+const accountLoggedOut = document.getElementById('accountLoggedOut');
+const accountLoggedIn = document.getElementById('accountLoggedIn');
+const loginForm = document.getElementById('loginForm');
+const registerForm = document.getElementById('registerForm');
+const showRegister = document.getElementById('showRegister');
+const backToLogin = document.getElementById('backToLogin');
+const backToLoginWrap = document.getElementById('backToLoginWrap');
+
+const accountEmailDisplay = document.getElementById('accountEmailDisplay');
+const accountNameDisplay = document.getElementById('accountNameDisplay');
+const accountWishlistCount = document.getElementById('accountWishlistCount');
+const accountCartCount = document.getElementById('accountCartCount');
+
+function updateAccountUI() {
+    const user = JSON.parse(localStorage.getItem('fw_user')) || null;
+    if (user) {
+        accountLoggedOut.style.display = 'none';
+        accountLoggedIn.style.display = 'block';
+        accountEmailDisplay.textContent = user.email;
+        accountNameDisplay.textContent = user.name;
+        accountWishlistCount.textContent = wishlist.length;
+        accountCartCount.textContent = cart.reduce((s, i) => s + i.qty, 0);
+    } else {
+        accountLoggedOut.style.display = 'block';
+        accountLoggedIn.style.display = 'none';
+    }
+}
+
+function openAccount() {
+    updateAccountUI();
+    accountModal.classList.add('show');
+    accountOverlay.classList.add('show');
+}
+
+function closeAccount() {
+    accountModal.classList.remove('show');
+    accountOverlay.classList.remove('show');
+}
+
+accountNav.addEventListener('click', (e) => { e.preventDefault(); openAccount(); });
+accountClose.addEventListener('click', closeAccount);
+accountOverlay.addEventListener('click', closeAccount);
+
+showRegister.addEventListener('click', (e) => {
+    e.preventDefault();
+    loginForm.style.display = 'none';
+    showRegister.parentElement.style.display = 'none';
+    registerForm.style.display = 'block';
+    backToLoginWrap.style.display = 'block';
+});
+
+backToLogin.addEventListener('click', (e) => {
+    e.preventDefault();
+    registerForm.style.display = 'none';
+    backToLoginWrap.style.display = 'none';
+    loginForm.style.display = 'block';
+    showRegister.parentElement.style.display = 'block';
+});
+
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value.trim();
+    const password = document.getElementById('loginPassword').value;
+    const users = JSON.parse(localStorage.getItem('fw_users')) || {};
+    const stored = users[email];
+    if (stored && stored.password === password) {
+        localStorage.setItem('fw_user', JSON.stringify({ name: stored.name, email }));
+        showToast('Welcome back, ' + stored.name + '!');
+        updateAccountUI();
+    } else {
+        showToast('Invalid email or password');
+    }
+    e.target.reset();
+});
+
+registerForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('regName').value.trim();
+    const email = document.getElementById('regEmail').value.trim();
+    const password = document.getElementById('regPassword').value;
+    const users = JSON.parse(localStorage.getItem('fw_users')) || {};
+    if (users[email]) {
+        showToast('An account with this email already exists');
+        return;
+    }
+    users[email] = { name, password };
+    localStorage.setItem('fw_users', JSON.stringify(users));
+    localStorage.setItem('fw_user', JSON.stringify({ name, email }));
+    showToast('Account created. Welcome, ' + name + '!');
+    updateAccountUI();
+    e.target.reset();
+});
+
+document.getElementById('logoutBtn').addEventListener('click', () => {
+    localStorage.removeItem('fw_user');
+    showToast('Signed out successfully');
+    updateAccountUI();
 });
 
 // ===== NEWSLETTER =====
