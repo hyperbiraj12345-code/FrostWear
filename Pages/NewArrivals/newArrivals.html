@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Arrivals | FrostWear</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="newArrivals.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="../index.html"><img src="../../asset/logo.png" alt="FrostWear Logo"></a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <button id="searchBtn">
+                <img src="../../asset/search.svg" alt="Search">
+            </button>
+        </div>
+
+        <!-- Right side -->
+        <div class="actions">
+            <a href="#" class="action-item" id="accountNav">
+                <img src="../../asset/circle-user.svg" alt="User">
+                <span>Account</span>
+            </a>
+            <a href="#" class="action-item" id="wishlistNav">
+                <img src="../../asset/heart.svg" alt="Wishlist">
+                <span>Wishlist</span>
+                <span class="cart-count" id="wishlistCount" style="display:none">0</span>
+            </a>
+            <a href="#" class="action-item" id="cartNav">
+                <img src="../../asset/shopping-cart.svg" alt="Cart">
+                <span>Cart</span>
+                <span class="cart-count" id="cartCount" style="display:none">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <nav class="bottom-nav">
+        <ul>
+            <li>
+                <a href="#" class="categories">
+                    <img src="../../asset/menu.svg" alt="Menu">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li><a href="../index.html" id="nav-home">Home</a></li>
+            <li><a href="../Sale/sale.html" id="nav-sale">Sale</a></li>
+            <li><a href="newArrivals.html" id="nav-new-arrivals" class="active">New Arrivals</a></li>
+            <li><a href="../Men/men.html" id="nav-men">Men</a></li>
+            <li><a href="../Women/women.html" id="nav-women">Women</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="arrivals-hero">
+        <div class="arrivals-hero-content">
+            <span class="arrivals-tag">Just Dropped</span>
+            <h1>New Arrivals</h1>
+            <p>Fresh styles just dropped for the season</p>
+            <a href="#fresh-picks" class="btn btn-primary">Shop Fresh Picks</a>
+        </div>
+    </section>
+
+    <!-- Fresh Picks -->
+    <section class="fresh-picks-section" id="fresh-picks">
+        <div class="section-header">
+            <h2 class="section-title">Fresh Picks</h2>
+        </div>
+        <div class="products-grid" id="freshPicksGrid"></div>
+        <div class="search-results" id="searchResults" style="display:none"></div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="newsletter-content">
+            <h2>Stay Warm With Us</h2>
+            <p>Get winter style inspiration and exclusive offers delivered to your inbox.</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Wishlist Drawer -->
+    <div class="drawer-overlay" id="wishlistOverlay"></div>
+    <div class="drawer" id="wishlistDrawer">
+        <div class="drawer-header">
+            <h2>My Wishlist</h2>
+            <button class="drawer-close" id="wishlistClose">&times;</button>
+        </div>
+        <div class="drawer-body" id="wishlistBody">
+            <p class="drawer-empty">Your wishlist is empty</p>
+        </div>
+        <div class="drawer-footer" id="wishlistFooter" style="display:none">
+            <button class="btn btn-primary drawer-btn" id="moveAllToCart">Move All to Cart</button>
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="drawer-overlay" id="cartOverlay"></div>
+    <div class="drawer" id="cartDrawer">
+        <div class="drawer-header">
+            <h2>Shopping Cart</h2>
+            <button class="drawer-close" id="cartClose">&times;</button>
+        </div>
+        <div class="drawer-body" id="cartBody">
+            <p class="drawer-empty">Your cart is empty</p>
+        </div>
+        <div class="drawer-footer" id="cartFooter" style="display:none">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary drawer-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Confirm Dialog -->
+    <div class="modal-overlay" id="confirmOverlay"></div>
+    <div class="confirm-dialog" id="confirmDialog">
+        <h3>Are you sure?</h3>
+        <p id="confirmMessage">Do you want to remove this item?</p>
+        <div class="confirm-actions">
+            <button class="btn btn-ghost" id="confirmNo">Cancel</button>
+            <button class="btn btn-primary" id="confirmYes">Remove</button>
+        </div>
+    </div>
+
+    <!-- Account Modal -->
+    <div class="modal-overlay" id="accountOverlay"></div>
+    <div class="account-modal" id="accountModal">
+        <button class="drawer-close account-close" id="accountClose">&times;</button>
+        <div id="accountLoggedOut">
+            <h3>Welcome to FrostWear</h3>
+            <p class="account-sub">Sign in or create an account</p>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email address" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit" class="btn btn-primary account-btn">Sign In</button>
+            </form>
+            <p class="account-switch">Don't have an account? <a href="#" id="showRegister">Create one</a></p>
+            <form id="registerForm" style="display:none">
+                <input type="text" id="regName" placeholder="Full name" required>
+                <input type="email" id="regEmail" placeholder="Email address" required>
+                <input type="password" id="regPassword" placeholder="Password" required>
+                <button type="submit" class="btn btn-primary account-btn">Create Account</button>
+            </form>
+            <p class="account-switch" id="backToLoginWrap" style="display:none"><a href="#" id="backToLogin">Back to sign in</a></p>
+        </div>
+        <div id="accountLoggedIn" style="display:none">
+            <h3>My Account</h3>
+            <p class="account-sub">Signed in as <span id="accountEmailDisplay"></span></p>
+            <div class="account-info">
+                <p><strong>Name:</strong> <span id="accountNameDisplay"></span></p>
+            </div>
+            <div class="account-stats">
+                <div class="account-stat"><h4 id="accountWishlistCount">0</h4><p>Wishlist</p></div>
+                <div class="account-stat"><h4 id="accountCartCount">0</h4><p>Cart Items</p></div>
+            </div>
+            <button class="btn btn-ghost account-btn" id="logoutBtn">Sign Out</button>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <span>&#10003;</span>
+        <p id="toastMessage">Item added to cart!</p>
+    </div>
+
+
+<footer>
+    <!--  Main Footer Conatiner -->
+    <div class="main-footer">
+
+        <div class="row1">
+
+            <div class="footer-image-holder">
+                <a href="../index.html"><img src="../../asset/FrostWearLogo.png" style="height:150px; width:320px"></a>
+                <p style="font-weight:bold;">Stay Warm. Stay Stylish.</p>
+                <p style="color:white;max-width: 260px;">Premuim winter clothing designed for comfort ,durability, and everyday adventures.</p>
+                <div class="social-media-holder">
+                     <a href="https://www.instagram.com/?hl=en" target="_blank"><img src="../../asset/Instagram.png"></a>
+                     <a href="https://www.facebook.com/" target="_blank"><img src="../../asset/Facebook.png"></a>
+                     <a href="https://www.tiktok.com/" target="_blank"><img src="../../asset/Tiktok.png"></a>
+                     <a href="https://x.com/" target="_blank"><img src="../../asset/X.png"></a>
+                     <a href="https://www.youtube.com/" target="_blank"><img src="../../asset/Youtube.png"></a>
+                </div>
+            </div>
+            
+            <ul class="footer-data">
+                <h3 class="footer-data-heading">SHOP</h3>
+                <li><a>Men</a></li>
+                <li><a>Women</a></li>
+                <li><a>Jackets</a></li>
+                <li><a>T-Shirts</a></li>
+                <li><a>Sweaters</a></li>
+            </ul>
+
+            <ul class="footer-data">
+                <h3 class="footer-data-heading">CUSTOMER CARE</h3>
+                <li><a>Contact Us</a></li>
+                <li><a>FAQ</a></li>
+                <li><a>Order Tracking</a></li>
+                <li><a>Shipping Information</a></li>
+                <li><a>Terms and Conditions</a></li>
+            </ul>
+
+            <ul class="footer-data">
+                <h3 class="footer-data-heading">COMPANY </h3>
+                <li><a>About Us</a></li>
+                <li><a>Our Story</a></li>
+                <li><a>Blog</a></li>
+                <li><a>Sustainability</a></li>
+                <li><a>Terms and Conditions</a></li>
+            </ul>
+
+            <ul class="footer-data">
+                <h3 class="footer-data-heading">STAY WARM WITH US </h3>
+                <li style="max-width:240px ;"><a>Get winter style inspiration and exclusive 
+                    offers delivered to your inbox</a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+            </ul>
+
+        </div>
+
+        <div class="row2">
+            <div class="footer-feature">
+                <img class="footer-feature-image" src="../../asset/Security.png" >
+                <div class="footer-feature-text">
+                    <h3>SECURE<h3>
+                    <p>100% safe & secure</p>
+                 </div>
+            </div>
+
+            <div class="footer-feature">
+                <img class="footer-feature-image" src="../../asset/Van.png" >
+                <div class="footer-feature-text">
+                    <h3>FAST DELIVERY<h3>
+                    <p>Quick & reliable shipping</p>
+                 </div>
+            </div>
+
+            <div class="footer-feature">
+                <img class="footer-feature-image" src="../../asset/EasyReturn.png" >
+                <div class="footer-feature-text">
+                    <h3>EASY RETURNS<h3>
+                    <p>Hassle free returns</p>
+                 </div>
+            </div>
+
+            <div class="footer-feature">
+                <img class="footer-feature-image" src="../../asset/Medal.png" >
+                <div class="footer-feature-text">
+                    <h3>PREMIUM QUALITY<h3>
+                    <p>Build to last, made for you</p>
+                 </div>
+            </div>
+
+            <div class="footer-feature">
+                <img class="footer-feature-image" src="../../asset/Headphone.png" >
+                <div class="footer-feature-text">
+                    <h3>CUSTOMER SUPPORT<h3>
+                    <p>We are here to help you</p>
+                 </div>
+            </div>
+
+        </div>
+        
+        <div class="row3">
+            <div style="margin-left: 35px;">
+                <p style="color: whitesmoke;font-size:18px;font-weight: 600;font-family: Arial, 
+                Helvetica, sans-serif; margin-bottom: 15px;">WE ACCEPT</p>
+                <div class="footer-image-economy">
+                    <img src="../../asset/Visa.png">
+                    <img src="../../asset/VennDiagram.png">
+                    <img src="../../asset/ESewa.png">
+                    <img src="../../asset/Khalti.png">
+                    <img src="../../asset/FonePay.png">
+                    <img src="../../asset/PayPal.png">
+                </div>
+            </div>
+            
+
+            <div>
+                <p style="color: whitesmoke;font-size:18px;font-weight: 600;font-family: Arial, 
+                Helvetica, sans-serif; margin-bottom: 15px;">DELIVERY PARTNERS</p>
+                <div class="footer-image-economy">
+                    <img src="../../asset/NepalCanMove.png">
+                    <img src="../../asset/Pathao.png">
+                    <img src="../../asset/LocalCourier.png">
+                    <img src="../../asset/DHL.png">
+                </div>
+            </div>
+
+        </div>
+
+        <div style=" width: 100%;height: 3px; background-color: green;"></div>
+
+        <div class="row4">
+            <div style="display: flex;">
+                <img src="../../asset/Frost.png" style="height: 70px;width: 70px;">
+                <p> &copy; 2026 <span style="color: green;font-weight: 600;">FrostWear</span> . All Rights Reserved </p>
+            </div>
+
+            <div style="display: flex;gap: 30px;margin-right: 50px;">
+                <p>Privacy Policy </p>
+                <p>|</p>
+                <p>Terms & Conditions </p>
+                <p>|</p>
+                <p>Return Policy </p>
+                <p>|</p>
+                <p>Site Map</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <script src="newArrivals.js"></script>
+</body>
+</html>
