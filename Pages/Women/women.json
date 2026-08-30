@@ -1,0 +1,227 @@
+﻿[
+    {
+        "id":  2,
+        "name":  "Fleece Lined Parka",
+        "price":  69.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-02.jpg"
+    },
+    {
+        "id":  6,
+        "name":  "Quilted Vest Jacket",
+        "price":  94.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-06.jpg"
+    },
+    {
+        "id":  10,
+        "name":  "Cashmere Blend Cardigan",
+        "price":  74.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-10.jpg"
+    },
+    {
+        "id":  14,
+        "name":  "Winter Knit Sweater",
+        "price":  64.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-14.jpg"
+    },
+    {
+        "id":  18,
+        "name":  "Sherpa Lined Denim Jacket",
+        "price":  119.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-18.jpg"
+    },
+    {
+        "id":  22,
+        "name":  "Sport Fleece Joggers",
+        "price":  49.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-22.jpg"
+    },
+    {
+        "id":  24,
+        "name":  "Heavyweight Puffer Vest",
+        "price":  79.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-24.jpg"
+    },
+    {
+        "id":  27,
+        "name":  "Cashmere Turtleneck",
+        "price":  54.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-27.jpg"
+    },
+    {
+        "id":  36,
+        "name":  "Merino Wool Cardigan",
+        "price":  64.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-36.jpg"
+    },
+    {
+        "id":  42,
+        "name":  "Fleece Lined Leggings",
+        "price":  29.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-42.jpg"
+    },
+    {
+        "id":  46,
+        "name":  "Cable Knit Sweater",
+        "price":  49.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-46.jpg"
+    },
+    {
+        "id":  50,
+        "name":  "Quilted Crossbody Bag",
+        "price":  39.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-50.jpg"
+    },
+    {
+        "id":  54,
+        "name":  "Wool Wrap Dress",
+        "price":  89.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-54.jpg"
+    },
+    {
+        "id":  57,
+        "name":  "Puffer Tote Bag",
+        "price":  44.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-57.jpg"
+    },
+    {
+        "id":  59,
+        "name":  "Fleece Coss-Back Top",
+        "price":  34.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-59.jpg"
+    },
+    {
+        "id":  60,
+        "name":  "Teddy Bear Coat",
+        "price":  134.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-60.jpg"
+    },
+    {
+        "id":  61,
+        "name":  "Ribbed Knit Midi Dress",
+        "price":  69.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-61.jpg"
+    },
+    {
+        "id":  62,
+        "name":  "Padded Shoulder Blazer",
+        "price":  109.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-62.jpg"
+    },
+    {
+        "id":  63,
+        "name":  "High Waist Thermal Pants",
+        "price":  39.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-63.jpg"
+    },
+    {
+        "id":  64,
+        "name":  "Oversized Wool Scarf",
+        "price":  34.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-64.jpg"
+    },
+    {
+        "id":  66,
+        "name":  "Relaxed Crew Tee",
+        "price":  59.99,
+        "oldPrice":  null,
+        "category":  "tshirts",
+        "badge":  "New",
+        "image":  "../../asset/products/product-66.jpg"
+    },
+    {
+        "id":  68,
+        "name":  "Wool Midi Skirt",
+        "price":  54.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-68.jpg"
+    },
+    {
+        "id":  70,
+        "name":  "Fleece Quarter Zip",
+        "price":  49.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-70.jpg"
+    },
+    {
+        "id":  72,
+        "name":  "Thermal Turtleneck Top",
+        "price":  29.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-72.jpg"
+    },
+    {
+        "id":  74,
+        "name":  "Double Breasted Coat",
+        "price":  149.99,
+        "oldPrice":  null,
+        "category":  "women",
+        "badge":  "New",
+        "image":  "../../asset/products/product-74.jpg"
+    }
+]
