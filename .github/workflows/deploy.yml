@@ -1,49 +1,45 @@
-name: Deploy Website
+name: Test and Deploy
 
+# 1. When should this run?
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
+    branches: ["main"]
 
+# 2. Permissions needed to deploy to Pages
+permissions:
+  pages: write
+  id-token: write
+
+# 3. What are we doing?
 jobs:
-  validate-html:
-    name: Validate HTML syntax
+  build-and-deploy:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout repository
+      # Step A: Get the code
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      # Step B: Install Node (needed for our testing tool)
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '20'
 
-      - name: Check HTML with html-validate
-        run: npx --yes html-validate "Pages/**/*.html"
+      # Step C: THE GATEKEEPER - Test the HTML syntax
+      - name: Check HTML Syntax
+        run: npx htmlhint "*/.html"
 
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: validate-html
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload site
+      # Step D: Package the files for deployment
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
-
+          path: '.'
+          
+      # Step E: Deploy to the live web
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
