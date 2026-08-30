@@ -10,6 +10,7 @@ body {
     min-height: 70vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     background: linear-gradient(135deg, #0a0e1a 0%, #1a1a3e 50%, #0a0e1a 100%);
     overflow: hidden;
 }
@@ -55,6 +56,7 @@ body {
     z-index: 2;
     padding: 80px;
     max-width: 700px;
+    text-align: center;
 }
 
 .men-hero-tag {
@@ -69,6 +71,7 @@ body {
     border: 1px solid #6366f1;
     padding: 6px 16px;
     width: fit-content;
+    margin: 0 auto 20px;
 }
 
 .men-hero-content h1 {
@@ -94,6 +97,7 @@ body {
 .hero-buttons {
     display: flex;
     gap: 20px;
+    justify-content: center;
 }
 
 .btn {
@@ -478,6 +482,39 @@ body {
 
 .drawer-item-remove:hover {
     opacity: 0.7;
+}
+
+.drawer-item-actions {
+    flex-wrap: wrap;
+}
+
+.drawer-remove-qty {
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    background: #f8fafc;
+    color: #ef4444;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 6px;
+    cursor: pointer;
+    outline: none;
+}
+
+.drawer-remove-qty:hover {
+    border-color: #ef4444;
+}
+
+#clearCartBtn {
+    background: #fff;
+    color: #ef4444;
+    border: 1px solid #ef4444;
+    margin-bottom: 10px;
+}
+
+#clearCartBtn:hover {
+    background: #ef4444;
+    color: #fff;
 }
 
 .drawer-footer {

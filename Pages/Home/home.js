@@ -157,6 +157,11 @@ function renderCart() {
                     <span class="qty-value">${item.qty}</span>
                     <button class="qty-btn" data-id="${item.id}" data-action="plus">+</button>
                     <button class="drawer-item-remove" data-id="${item.id}">Remove</button>
+                    <select class="drawer-remove-qty" data-id="${item.id}">
+                        <option value="" selected>Remove qty</option>
+                        ${Array.from({ length: item.qty }, (_, i) => '<option value="' + (i + 1) + '">Remove ' + (i + 1) + '</option>').join('')}
+                        <option value="all">Remove All</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -176,6 +181,36 @@ function renderCart() {
             removeFromCart(parseInt(btn.dataset.id));
         });
     });
+
+    cartBody.querySelectorAll('.drawer-remove-qty').forEach(sel => {
+        sel.addEventListener('change', () => {
+            const id = parseInt(sel.dataset.id);
+            const val = sel.value;
+            sel.selectedIndex = 0;
+            if (!val) return;
+            const cartItem = cart.find(i => i.id === id);
+            if (!cartItem) return;
+            const qtyToRemove = val === 'all' ? cartItem.qty : Math.min(parseInt(val), cartItem.qty);
+            if (cartItem.qty <= qtyToRemove) {
+                cart = cart.filter(i => i.id !== id);
+            } else {
+                cartItem.qty -= qtyToRemove;
+            }
+            saveCart();
+            renderCart();
+            showToast('Removed ' + qtyToRemove + ' of ' + cartItem.name);
+        });
+    });
+}
+
+function clearCart() {
+    if (cart.length === 0) return;
+    askConfirm('Remove all items from your cart?', () => {
+        cart = [];
+        saveCart();
+        renderCart();
+        showToast('Cart cleared');
+    });
 }
 
 function openCart() {
@@ -192,6 +227,8 @@ function closeCart() {
 cartNav.addEventListener('click', (e) => { e.preventDefault(); openCart(); });
 cartClose.addEventListener('click', closeCart);
 cartOverlay.addEventListener('click', closeCart);
+const clearCartBtn = document.getElementById('clearCartBtn');
+clearCartBtn.addEventListener('click', clearCart);
 
 // ===== WISHLIST =====
 const wishlistCountEl = document.getElementById('wishlistCount');
@@ -463,10 +500,41 @@ searchResultsGrid.className = 'products-grid';
 searchResults.appendChild(searchResultsGrid);
 bindGrid(searchResultsGrid);
 
+function showNoResultsBanner(query) {
+    let banner = document.getElementById('fwNoResultsBanner');
+    if (!banner) {
+        banner = document.createElement('div');
+        banner.id = 'fwNoResultsBanner';
+        banner.style.position = 'fixed';
+        banner.style.top = '140px';
+        banner.style.left = '0';
+        banner.style.width = '100%';
+        banner.style.zIndex = '950';
+        banner.style.background = '#fef2f2';
+        banner.style.color = '#b91c1c';
+        banner.style.fontFamily = "'Montserrat', Arial, sans-serif";
+        banner.style.fontSize = '15px';
+        banner.style.fontWeight = '600';
+        banner.style.textAlign = 'center';
+        banner.style.padding = '14px 20px';
+        banner.style.boxShadow = '0 2px 10px rgba(0,0,0,0.12)';
+        banner.style.borderBottom = '2px solid #fca5a5';
+        document.body.appendChild(banner);
+    }
+    banner.textContent = 'No products match "' + query + '".';
+    banner.style.display = 'block';
+}
+
+function hideNoResultsBanner() {
+    const banner = document.getElementById('fwNoResultsBanner');
+    if (banner) banner.style.display = 'none';
+}
+
 function performSearch() {
     const query = searchInput.value.trim().toLowerCase();
     if (!query) {
         showToast('Please enter a search term');
+        hideNoResultsBanner();
         return;
     }
     const results = allProducts.filter(p =>
@@ -478,9 +546,12 @@ function performSearch() {
     document.getElementById('searchResultsSection').scrollIntoView({ behavior: 'smooth' });
 
     if (results.length === 0) {
+        showNoResultsBanner(searchInput.value.trim());
         searchResultsGrid.innerHTML = '<p class="no-results">No products match "' + searchInput.value.trim() + '".</p>';
         return;
     }
+
+    hideNoResultsBanner();
 
     const bar = document.createElement('div');
     bar.className = 'result-bar';
@@ -493,6 +564,7 @@ function performSearch() {
 
     bar.querySelector('.back-btn').addEventListener('click', () => {
         searchResultsSection.style.display = 'none';
+        hideNoResultsBanner();
         searchInput.value = '';
     });
 }

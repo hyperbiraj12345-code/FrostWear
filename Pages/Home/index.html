@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FrostWear</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../common CSS/style.css">
     <link rel="stylesheet" href="Home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,30 +16,30 @@
     <nav class="top-nav">
         <!-- Logo -->
         <div class="logo">
-            <img src="./asset/logo.png" alt="FrostWear Logo">
+            <a href="index.html"><img src="../../asset/logo.png" alt="FrostWear Logo"></a>
         </div>
 
         <!-- Search Bar -->
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="Search for products...">
             <button id="searchBtn">
-                <img src="./asset/search.svg" alt="Search">
+                <img src="../../asset/search.svg" alt="Search">
             </button>
         </div>
 
         <!-- Right side -->
         <div class="actions">
             <a href="#" class="action-item" id="accountNav">
-                <img src="./asset/circle-user.svg" alt="User">
+                <img src="../../asset/circle-user.svg" alt="User">
                 <span>Account</span>
             </a>
             <a href="#" class="action-item" id="wishlistNav">
-                <img src="./asset/heart.svg" alt="Wishlist">
+                <img src="../../asset/heart.svg" alt="Wishlist">
                 <span>Wishlist</span>
                 <span class="cart-count" id="wishlistCount" style="display:none">0</span>
             </a>
             <a href="#" class="action-item" id="cartNav">
-                <img src="./asset/shopping-cart.svg" alt="Cart">
+                <img src="../../asset/shopping-cart.svg" alt="Cart">
                 <span>Cart</span>
                 <span class="cart-count" id="cartCount" style="display:none">0</span>
             </a>
@@ -48,19 +48,25 @@
 
     <nav class="bottom-nav">
         <ul>
-            <li>
-                <a href="#" class="categories">
-                    <img src="./asset/menu.svg" alt="Menu">
+            <li class="category-wrap">
+                <a href="#" class="categories categories-toggle">
+                    <img src="../../asset/menu.svg" alt="Menu">
                     <span>Categories</span>
                 </a>
+                <div class="category-dropdown">
+                    <a href="../Men/men.html">Men</a>
+                    <a href="../NewArrivals/newArrivals.html">New Arrivals</a>
+                    <a href="../Women/women.html">Women</a>
+                    <a href="../Sale/sale.html">Sale</a>
+                </div>
             </li>
-            <li><a href="#" data-filter="all">Home</a></li>
-            <li><a href="#" data-filter="sale">Sale</a></li>
-            <li><a href="#" data-filter="new">New Arrivals</a></li>
-            <li><a href="#" data-filter="men">Men</a></li>
-            <li><a href="#" data-filter="women">Women</a></li>            
-            <li><a href="AboutUs.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="../Sale/sale.html">Sale</a></li>
+            <li><a href="../NewArrivals/newArrivals.html">New Arrivals</a></li>
+            <li><a href="../Men/men.html">Men</a></li>
+            <li><a href="../Women/women.html">Women</a></li>            
+            <li><a href="../AboutUs/AboutUs.html">About Us</a></li>
+            <li><a href="../Contact/contact.html">Contact</a></li>
         </ul>
     </nav>
 
@@ -226,6 +232,7 @@
                 <span>Total:</span>
                 <span id="cartTotal">$0.00</span>
             </div>
+            <button class="btn btn-primary drawer-btn" id="clearCartBtn">Clear Cart</button>
             <button class="btn btn-primary drawer-btn">Checkout</button>
         </div>
     </div>
@@ -295,15 +302,15 @@
         <div class="row1">
 
             <div class="footer-image-holder">
-                <a href="index.html"><img src="./asset/FrostWearLogo.png" style="height:150px; width:320px"></a>
+                <a href="index.html"><img src="../../asset/FrostWearLogo.png" style="height:150px; width:320px"></a>
                 <p style="font-weight:bold;">Stay Warm. Stay Stylish.</p>
                 <p style="color:white;max-width: 260px;">Premuim winter clothing designed for comfort ,durability, and everyday adventures.</p>
                 <div class="social-media-holder">
-                     <a href="https://www.instagram.com/?hl=en" target="_blank"><img src="./asset/Instagram.png"></a>
-                     <a href="https://www.facebook.com/" target="_blank"><img src="./asset/Facebook.png"></a>
-                     <a href="https://www.tiktok.com/" target="_blank"><img src="./asset/Tiktok.png"></a>
-                     <a href="https://x.com/" target="_blank"><img src="./asset/X.png"></a>
-                     <a href="https://www.youtube.com/" target="_blank"><img src="./asset/Youtube.png"></a>
+                     <a href="https://www.instagram.com/?hl=en" target="_blank"><img src="../../asset/Instagram.png"></a>
+                     <a href="https://www.facebook.com/" target="_blank"><img src="../../asset/Facebook.png"></a>
+                     <a href="https://www.tiktok.com/" target="_blank"><img src="../../asset/Tiktok.png"></a>
+                     <a href="https://x.com/" target="_blank"><img src="../../asset/X.png"></a>
+                     <a href="https://www.youtube.com/" target="_blank"><img src="../../asset/Youtube.png"></a>
                 </div>
             </div>
             
@@ -347,7 +354,7 @@
 
         <div class="row2">
             <div class="footer-feature">
-                <img class="footer-feature-image" src="./asset/Security.png" >
+                <img class="footer-feature-image" src="../../asset/Security.png" >
                 <div class="footer-feature-text">
                     <h3>SECURE<h3>
                     <p>100% safe & secure</p>
@@ -355,7 +362,7 @@
             </div>
 
             <div class="footer-feature">
-                <img class="footer-feature-image" src="./asset/Van.png" >
+                <img class="footer-feature-image" src="../../asset/Van.png" >
                 <div class="footer-feature-text">
                     <h3>FAST DELIVERY<h3>
                     <p>Quick & reliable shipping</p>
@@ -363,7 +370,7 @@
             </div>
 
             <div class="footer-feature">
-                <img class="footer-feature-image" src="./asset/EasyReturn.png" >
+                <img class="footer-feature-image" src="../../asset/EasyReturn.png" >
                 <div class="footer-feature-text">
                     <h3>EASY RETURNS<h3>
                     <p>Hassle free returns</p>
@@ -371,7 +378,7 @@
             </div>
 
             <div class="footer-feature">
-                <img class="footer-feature-image" src="./asset/Medal.png" >
+                <img class="footer-feature-image" src="../../asset/Medal.png" >
                 <div class="footer-feature-text">
                     <h3>PREMIUM QUALITY<h3>
                     <p>Build to last, made for you</p>
@@ -379,7 +386,7 @@
             </div>
 
             <div class="footer-feature">
-                <img class="footer-feature-image" src="./asset/Headphone.png" >
+                <img class="footer-feature-image" src="../../asset/Headphone.png" >
                 <div class="footer-feature-text">
                     <h3>CUSTOMER SUPPORT<h3>
                     <p>We are here to help you</p>
@@ -393,12 +400,12 @@
                 <p style="color: whitesmoke;font-size:18px;font-weight: 600;font-family: Arial, 
                 Helvetica, sans-serif; margin-bottom: 15px;">WE ACCEPT</p>
                 <div class="footer-image-economy">
-                    <img src="./asset/Visa.png">
-                    <img src="./asset/VennDiagram.png">
-                    <img src="./asset/ESewa.png">
-                    <img src="./asset/Khalti.png">
-                    <img src="./asset/FonePay.png">
-                    <img src="./asset/PayPal.png">
+                    <img src="../../asset/Visa.png">
+                    <img src="../../asset/VennDiagram.png">
+                    <img src="../../asset/ESewa.png">
+                    <img src="../../asset/Khalti.png">
+                    <img src="../../asset/FonePay.png">
+                    <img src="../../asset/PayPal.png">
                 </div>
             </div>
             
@@ -407,10 +414,10 @@
                 <p style="color: whitesmoke;font-size:18px;font-weight: 600;font-family: Arial, 
                 Helvetica, sans-serif; margin-bottom: 15px;">DELIVERY PARTNERS</p>
                 <div class="footer-image-economy">
-                    <img src="./asset/NepalCanMove.png">
-                    <img src="./asset/Pathao.png">
-                    <img src="./asset/LocalCourier.png">
-                    <img src="./asset/DHL.png">
+                    <img src="../../asset/NepalCanMove.png">
+                    <img src="../../asset/Pathao.png">
+                    <img src="../../asset/LocalCourier.png">
+                    <img src="../../asset/DHL.png">
                 </div>
             </div>
 
@@ -420,7 +427,7 @@
 
         <div class="row4">
             <div style="display: flex;">
-                <img src="./asset/Frost.png" style="height: 70px;width: 70px;">
+                <img src="../../asset/Frost.png" style="height: 70px;width: 70px;">
                 <p> &copy; 2026 <span style="color: green;font-weight: 600;">FrostWear</span> . All Rights Reserved </p>
             </div>
 
@@ -440,6 +447,7 @@
 
 </footer>
 
+    <script src="../../common JS/categories.js"></script>
     <script src="home.js"></script>
 </body>
 </html>

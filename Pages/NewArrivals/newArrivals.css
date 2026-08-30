@@ -442,6 +442,39 @@
     opacity: 0.7;
 }
 
+.drawer-item-actions {
+    flex-wrap: wrap;
+}
+
+.drawer-remove-qty {
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    background: #f8fafc;
+    color: #ef4444;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 6px;
+    cursor: pointer;
+    outline: none;
+}
+
+.drawer-remove-qty:hover {
+    border-color: #ef4444;
+}
+
+#clearCartBtn {
+    background: #fff;
+    color: #ef4444;
+    border: 1px solid #ef4444;
+    margin-bottom: 10px;
+}
+
+#clearCartBtn:hover {
+    background: #ef4444;
+    color: #fff;
+}
+
 .drawer-footer {
     padding: 16px 24px;
     border-top: 1px solid #e2e8f0;

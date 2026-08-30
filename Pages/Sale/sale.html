@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winter Sale | FrostWear</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../common CSS/style.css">
     <link rel="stylesheet" href="sale.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
     <nav class="top-nav">
         <!-- Logo -->
         <div class="logo">
-            <a href="../index.html"><img src="../../asset/logo.png" alt="FrostWear Logo"></a>
+            <a href="../Home/index.html"><img src="../../asset/logo.png" alt="FrostWear Logo"></a>
         </div>
 
         <!-- Search Bar -->
@@ -47,19 +47,25 @@
 
     <nav class="bottom-nav">
         <ul>
-            <li>
-                <a href="#" class="categories">
+            <li class="category-wrap">
+                <a href="#" class="categories categories-toggle">
                     <img src="../../asset/menu.svg" alt="Menu">
                     <span>Categories</span>
                 </a>
+                <div class="category-dropdown">
+                    <a href="../Men/men.html">Men</a>
+                    <a href="../NewArrivals/newArrivals.html">New Arrivals</a>
+                    <a href="../Women/women.html">Women</a>
+                    <a href="../Sale/sale.html">Sale</a>
+                </div>
             </li>
-            <li><a href="../../index.html" id="nav-home">Home</a></li>
+            <li><a href="../Home/index.html" id="nav-home">Home</a></li>
             <li><a href="sale.html" id="nav-sale" class="active">Sale</a></li>
-            <li><a href="../../Pages/NewArrivals/newArrivals.html">New Arrivals</a></li>
-            <li><a href="../../Pages/Men/men.html" id="nav-men">Men</a></li>
-            <li><a href="../../Pages/Women/women.html" id="nav-women">Women</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="../NewArrivals/newArrivals.html" id="nav-new">New Arrivals</a></li>
+            <li><a href="../Men/men.html" id="nav-men">Men</a></li>
+            <li><a href="../Women/women.html" id="nav-women">Women</a></li>
+            <li><a href="../AboutUs/AboutUs.html">About Us</a></li>
+            <li><a href="../Contact/contact.html">Contact</a></li>
         </ul>
     </nav>
 
@@ -124,6 +130,7 @@
                 <span>Total:</span>
                 <span id="cartTotal">$0.00</span>
             </div>
+            <button class="btn btn-primary drawer-btn" id="clearCartBtn">Clear Cart</button>
             <button class="btn btn-primary drawer-btn">Checkout</button>
         </div>
     </div>
@@ -188,7 +195,7 @@
         <div class="row1">
 
             <div class="footer-image-holder">
-                <a href="../index.html"><img src="../../asset/FrostWearLogo.png" style="height:150px; width:320px"></a>
+                <a href="../Home/index.html"><img src="../../asset/FrostWearLogo.png" style="height:150px; width:320px"></a>
                 <p style="font-weight:bold;">Stay Warm. Stay Stylish.</p>
                 <p style="color:white;max-width: 260px;">Premuim winter clothing designed for comfort ,durability, and everyday adventures.</p>
                 <div class="social-media-holder">
@@ -333,6 +340,7 @@
 
 </footer>
 
+    <script src="../../common JS/categories.js"></script>
     <script src="sale.js"></script>
 </body>
 </html>
