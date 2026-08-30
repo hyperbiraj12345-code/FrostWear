@@ -1,45 +1,70 @@
 name: Test and Deploy
 
-# 1. When should this run?
 on:
   push:
     branches: ["main"]
 
-# 2. Permissions needed to deploy to Pages
 permissions:
+  contents: read
   pages: write
   id-token: write
 
-# 3. What are we doing?
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
-      # Step A: Get the code
+      # Step 1: Get the code
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # Step B: Install Node (needed for our testing tool)
+      # Step 2: Install Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
-      # Step C: THE GATEKEEPER - Test the HTML syntax
+      # Step 3: Check HTML
       - name: Check HTML Syntax
-        run: npx htmlhint "*/.html"
+        run: npx htmlhint "**/*.html"
 
-      # Step D: Package the files for deployment
+      # Step 4: Create deployment folder
+      - name: Prepare Website
+        run: |
+          mkdir _site
+
+          # Copy website folders
+          cp -r Pages _site/
+          cp -r asset _site/
+          cp -r "common CSS" _site/
+          cp -r "common JS" _site/
+
+          # Create main index.html
+          cat > _site/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="refresh" content="0; url=Pages/Home/index.html">
+            <title>FrostWear</title>
+          </head>
+          <body>
+            <p>Redirecting to FrostWear...</p>
+          </body>
+          </html>
+          EOF
+
+      # Step 5: Configure GitHub Pages
       - name: Setup Pages
-        uses: actions/configure-pages@v4
-      
+        uses: actions/configure-pages@v5
+
+      # Step 6: Upload website
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
-          
-      # Step E: Deploy to the live web
+          path: "./_site"
+
+      # Step 7: Deploy
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
