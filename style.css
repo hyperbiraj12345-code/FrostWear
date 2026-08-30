@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 .top-nav {
   position: fixed;
   top: 0;
@@ -123,7 +124,6 @@
     display:flex;
     align-items:center;
     padding:0 40px;
-    border-bottom:1px solid #cbd5e1;
 }
 
 .bottom-nav ul{
@@ -134,35 +134,32 @@
 }
 
 .bottom-nav ul li a{
-    text-decoration:none;
-    color: #0b1220;; 
-    font-size:16px;
-    font-family : arial, sans-serif;
-    font-weight:600;
-    transition:.3s;
-    position:relative;
-    text-transform:uppercase;
+    text-decoration: none; 
+    color: #0b1220;  
+    font-size: 16px; 
+    font-family: Arial, sans-serif; 
+    font-weight: 600; 
+    transition: color 0.3s ease; 
+    position: relative; 
+    text-transform: uppercase; 
+}
+.bottom-nav ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
 }
 
 .bottom-nav ul li a:hover{
-    color:#ffff;
+    color: white;
 }
-
-.bottom-nav ul li a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-8px;
-    width:0;
-    height:2px;
-    background:#ffff;
-    transition:.3s;
-}
-
 .bottom-nav ul li a:hover::after{
-    width:100%;
+    width: 100%;
 }
-
 .bottom-nav{
     box-shadow:0 2px 6px rgba(0,0,0,.08);
 }
@@ -190,16 +187,17 @@
 .main-footer{
     display:flex;
     flex-direction: column;
-    background-color:#000C19;
+    background-color:#060A17;
 }
 .row1{
     display: flex;
     gap: 70px;
+    margin-left:30px;
 }
 .footer-image-holder{
     display: flex;
     flex-direction: column;
-    background-color:#000C19 ;
+    background-color:#060A17 ;
     max-width:350px;
 }
 .footer-image-holder p{
@@ -209,6 +207,10 @@
     color: green;
     align-self: center;
     letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+.footer-image-holder a{
+    margin-bottom: 10px;
 }
 .social-media-holder{
     display:flex;
@@ -231,6 +233,7 @@
     font-family: Arial, Helvetica, sans-serif;
     color: whitesmoke;
     letter-spacing: 0.5px;
+    text-decoration: none;
 }
 .footer-data a:hover{
     color: green;
@@ -249,7 +252,7 @@
   text-underline-offset: 10px;
 }
 .footer-data li::marker{
-    color:#000C19 ;
+    color:#060A17 ;
 }
 .row2{
     display: flex;
